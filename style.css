@@ -1,0 +1,69 @@
+/* Converted CSS for JavaFX */
+.button {
+    -fx-text-fill: #fff;
+    -fx-font-family: Inter;
+    -fx-font-size: 20px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+    -fx-background-color: #04092b;
+    -fx-pref-width: 362px;
+    -fx-pref-height: 51px;
+}
+.button2 {
+    -fx-text-fill: #868686;
+    -fx-font-family: Inter;
+    -fx-font-size: 20px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+    -fx-background-color: #fff;
+    -fx-pref-width: 362px;
+    -fx-pref-height: 51px;
+    -fx-border-color: #ccc;
+}
+
+.pane {
+    -fx-pref-width: 1280px;
+    -fx-pref-height: 720px;
+    -fx-background-color: #04092b;
+}
+.rectangle{
+    -fx-pref-width: 530px;
+    -fx-pref-height: 720px;
+    -fx-fill: #fff;
+}
+.title {
+    -fx-text-fill: #04092B;
+    -fx-font-family: Inter;
+    -fx-font-size: 49px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+}
+.subtitle {
+    -fx-text-fill: #04092B;
+    -fx-font-family: Inter;
+    -fx-font-size: 20px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+}
+.subtitle_white {
+    -fx-text-fill: #fff;
+    -fx-font-family: Inter;
+    -fx-font-size: 20px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+}
+
+.textField {
+    -fx-pref-width: 362px;
+    -fx-pref-height: 51px;
+    -fx-background-color: #d9d9d9;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 0);
+
+}
+
+
