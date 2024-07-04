@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Principal extends Application {
@@ -15,8 +16,12 @@ public class Principal extends Application {
         Parent root = loader.load();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Login");
+        primaryStage.setTitle("Crypta Nostalgica");
         primaryStage.show();
+        // bloqueia o redimensionamento da tela
+        primaryStage.setResizable(false);
+        primaryStage.centerOnScreen();
+        primaryStage.getIcons().add(new Image("images/esboço-logo-export.png"));
     }
 
 }
