@@ -9,13 +9,15 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="600.0" styleClass="pane_white" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="67.0" layoutX="1101.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="circle" width="183.0" />
       <Label layoutX="992.0" layoutY="630.0" styleClass="subtitle" />
-      <ToolBar nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="false" prefHeight="40.0" prefWidth="200.0" styleClass="barra">
+      <ToolBar layoutX="-162.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="false" prefHeight="40.0" prefWidth="1289.0" styleClass="barra">
         <items>
             <Button alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="login" textAlignment="CENTER">
                <cursor>
@@ -39,6 +41,9 @@
                <font>
                   <Font name="Candara" size="15.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
             </TextField>
         </items>
          <opaqueInsets>
@@ -48,75 +53,241 @@
             <Insets left="24.0" />
          </padding>
       </ToolBar>
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="974.0" layoutY="17.0">
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="801.0" layoutY="17.0">
          <image>
             <Image url="@images/simbolo-de-interface-de-lupa-de-pesquisa.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="81.0" fitWidth="150.0" layoutX="27.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="81.0" fitWidth="150.0" layoutX="172.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/logo_barra.png" />
          </image>
       </ImageView>
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="73.0" layoutY="121.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="73.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="188.0" layoutY="118.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Rectangle>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="188.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
             <Image url="@images/imagem-padrao.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="73.0" layoutY="430.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="73.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="188.0" layoutY="427.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Rectangle>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="188.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
             <Image url="@images/imagem-padrao.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="308.0" layoutY="121.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="308.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="423.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Rectangle>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="423.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
             <Image url="@images/imagem-padrao.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="308.0" layoutY="430.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="308.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="423.0" layoutY="427.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Rectangle>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="423.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
             <Image url="@images/imagem-padrao.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="542.0" layoutY="121.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="542.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="657.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Rectangle>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="657.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
             <Image url="@images/imagem-padrao.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="542.0" layoutY="430.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="542.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="657.0" layoutY="427.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Rectangle>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="657.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
             <Image url="@images/imagem-padrao.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="777.0" layoutY="121.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="777.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="892.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Rectangle>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="892.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
             <Image url="@images/imagem-padrao.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="777.0" layoutY="430.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="777.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="892.0" layoutY="427.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Rectangle>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="892.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
             <Image url="@images/imagem-padrao.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="1008.0" layoutY="121.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="1008.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
-         <image>
-            <Image url="@images/imagem-padrao.png" />
-         </image>
-      </ImageView>
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="1008.0" layoutY="430.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="1008.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
-         <image>
-            <Image url="@images/imagem-padrao.png" />
-         </image>
-      </ImageView>
+      <Label layoutX="188.0" layoutY="84.0" styleClass="subtitle" text="O panteão da Crypta Nostálgica" />
+      <Label layoutX="188.0" layoutY="395.0" styleClass="subtitle" text="Os recém chegados" />
+      <Circle fill="DODGERBLUE" layoutX="213.0" layoutY="341.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label layoutX="202.0" layoutY="328.0" styleClass="score" text="00">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Circle fill="DODGERBLUE" layoutX="447.0" layoutY="340.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label layoutX="436.0" layoutY="327.0" styleClass="score" text="00">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Circle fill="DODGERBLUE" layoutX="681.0" layoutY="342.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label layoutX="670.0" layoutY="329.0" styleClass="score" text="00">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Circle fill="DODGERBLUE" layoutX="917.0" layoutY="340.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label layoutX="906.0" layoutY="327.0" styleClass="score" text="00">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Circle fill="DODGERBLUE" layoutX="212.0" layoutY="651.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label layoutX="201.0" layoutY="638.0" styleClass="score" text="00">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Circle fill="DODGERBLUE" layoutX="446.0" layoutY="650.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label layoutX="435.0" layoutY="637.0" styleClass="score" text="00">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Circle fill="DODGERBLUE" layoutX="680.0" layoutY="652.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label layoutX="669.0" layoutY="639.0" styleClass="score" text="00">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Circle fill="DODGERBLUE" layoutX="916.0" layoutY="650.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label layoutX="905.0" layoutY="637.0" styleClass="score" text="00">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="239.0" layoutY="326.0" styleClass="game_title" text="Título">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="239.0" layoutY="636.0" styleClass="game_title" text="Título">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="473.0" layoutY="326.0" styleClass="game_title" text="Título">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="473.0" layoutY="636.0" styleClass="game_title" text="Título">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="708.0" layoutY="326.0" styleClass="game_title" text="Título">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="708.0" layoutY="636.0" styleClass="game_title" text="Título">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="942.0" layoutY="326.0" styleClass="game_title" text="Título">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="942.0" layoutY="636.0" styleClass="game_title" text="Título">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
    </children>
 </AnchorPane>
