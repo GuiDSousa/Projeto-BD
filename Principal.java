@@ -11,8 +11,10 @@ public class Principal extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("tela-login.fxml"));
+
         Parent root = loader.load();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);

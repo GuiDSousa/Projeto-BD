@@ -13,43 +13,34 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="600.0" styleClass="pane_blue" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="720.0" layoutX="750.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="530.0" />
-      <Label layoutX="806.0" layoutY="61.0" styleClass="title" stylesheets="@style.css" text="login" AnchorPane.bottomAnchor="577.0" AnchorPane.leftAnchor="840.0" AnchorPane.rightAnchor="329.0" AnchorPane.topAnchor="72.0" />
-      <Label layoutX="840.0" layoutY="234.0" styleClass="subtitle" text="Email" />
-      <TextField layoutX="840.0" layoutY="264.0" styleClass="textField">
+      <Label layoutX="806.0" layoutY="61.0" styleClass="title" stylesheets="@style.css" text="cadastro" AnchorPane.bottomAnchor="577.0" AnchorPane.leftAnchor="840.0" AnchorPane.topAnchor="72.0" />
+      <Label layoutX="840.0" layoutY="258.0" styleClass="subtitle" text="Email" />
+      <TextField layoutX="840.0" layoutY="288.0" styleClass="textField">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Label layoutX="840.0" layoutY="335.0" styleClass="subtitle" text="Senha" />
-      <Button layoutX="840.0" layoutY="444.0" mnemonicParsing="false" text="Entrar">
+      <Label layoutX="840.0" layoutY="438.0" styleClass="subtitle" text="Confirmar senha" />
+      <Button layoutX="840.0" layoutY="549.0" mnemonicParsing="false" text="Cadastrar">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="841.0" layoutY="507.0" mnemonicParsing="false" styleClass="button2" text="Entrar com Google">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Label layoutX="840.0" layoutY="578.0" styleClass="subtitle" text="Não possui registro?" />
-      <Label layoutX="1029.0" layoutY="578.0" styleClass="subtitle" text="Clique aqui." underline="true">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Label>
-      <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="870.0" layoutY="515.0">
-         <image>
-            <Image url="@images/google.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="669.0" fitWidth="669.0" layoutX="47.0" layoutY="-111.0">
          <image>
             <Image url="@images/logo-transparente.png" />
          </image>
       </ImageView>
-      <Label layoutX="840.0" layoutY="143.0" styleClass="subtitle" text="Digite suas credenciais para &#10;adentrar na Crypta&#10;" />
       <Label layoutX="125.0" layoutY="390.0" styleClass="subtitle_white" text="&quot;Juro solenemente que, ao adentrar na Crypta Nostálgica, &#10;honrarei a memória dos jogos clássicos, contribuirei com &#10;avaliações honestas e detalhadas, e respeitarei a &#10;comunidade de entusiastas. Comprometo-me a manter &#10;o espírito de nostalgia vivo e a compartilhar minhas&#10; experiências com integridade e paixão.&quot;&#10;&#10;" textAlignment="CENTER" />
       <Label layoutX="992.0" layoutY="630.0" styleClass="subtitle" />
-      <PasswordField layoutX="841.0" layoutY="371.0" styleClass="textField" />
+      <Label layoutX="840.0" layoutY="165.0" styleClass="subtitle" text="Nome de Usuário" />
+      <TextField layoutX="840.0" layoutY="195.0" styleClass="textField">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="840.0" layoutY="350.0" styleClass="subtitle" text="Senha" />
+      <PasswordField layoutX="840.0" layoutY="381.0" styleClass="textField" />
+      <PasswordField layoutX="840.0" layoutY="467.0" styleClass="textField" />
    </children>
 </AnchorPane>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="600.0" styleClass="pane_white" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="992.0" layoutY="630.0" styleClass="subtitle" />
+      <ToolBar nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="false" prefHeight="40.0" prefWidth="200.0" styleClass="barra">
+        <items>
+            <Button alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="login" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+          <Button alignment="TOP_CENTER" mnemonicParsing="false" styleClass="bar_button" text="cadastro">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="perfil" textAlignment="CENTER" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField alignment="CENTER_RIGHT" promptText="Explore a Crypta" styleClass="barra_pesquisa">
+               <font>
+                  <Font name="Candara" size="15.0" />
+               </font>
+            </TextField>
+        </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="24.0" />
+         </padding>
+      </ToolBar>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="974.0" layoutY="17.0">
+         <image>
+            <Image url="@images/simbolo-de-interface-de-lupa-de-pesquisa.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="150.0" layoutX="27.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo_barra.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="73.0" layoutY="121.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="73.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+         <image>
+            <Image url="@images/imagem-padrao.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="73.0" layoutY="430.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="73.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+         <image>
+            <Image url="@images/imagem-padrao.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="308.0" layoutY="121.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="308.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+         <image>
+            <Image url="@images/imagem-padrao.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="308.0" layoutY="430.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="308.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+         <image>
+            <Image url="@images/imagem-padrao.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="542.0" layoutY="121.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="542.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+         <image>
+            <Image url="@images/imagem-padrao.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="542.0" layoutY="430.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="542.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+         <image>
+            <Image url="@images/imagem-padrao.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="777.0" layoutY="121.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="777.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+         <image>
+            <Image url="@images/imagem-padrao.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="777.0" layoutY="430.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="777.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+         <image>
+            <Image url="@images/imagem-padrao.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="1008.0" layoutY="121.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="1008.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+         <image>
+            <Image url="@images/imagem-padrao.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="1008.0" layoutY="430.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="1008.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+         <image>
+            <Image url="@images/imagem-padrao.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

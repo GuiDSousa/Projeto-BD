@@ -1,7 +1,7 @@
 /* Converted CSS for JavaFX */
 .button {
     -fx-text-fill: #fff;
-    -fx-font-family: Inter;
+    -fx-font-family: Candara;
     -fx-font-size: 20px;
     -fx-font-style: normal;
     -fx-font-weight: 400;
@@ -12,7 +12,7 @@
 }
 .button2 {
     -fx-text-fill: #868686;
-    -fx-font-family: Inter;
+    -fx-font-family: Candara;
     -fx-font-size: 20px;
     -fx-font-style: normal;
     -fx-font-weight: 400;
@@ -22,20 +22,52 @@
     -fx-pref-height: 51px;
     -fx-border-color: #ccc;
 }
+.bar_button {
+    -fx-text-fill: #04092B;
+    -fx-font-family: Candara;
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+    -fx-background-color: #fff;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 26px;
+}
 
-.pane {
+.pane_blue {
     -fx-pref-width: 1280px;
     -fx-pref-height: 720px;
     -fx-background-color: #04092b;
+}
+.pane_white {
+    -fx-pref-width: 1280px;
+    -fx-pref-height: 720px;
+    -fx-background-color: #fff;
 }
 .rectangle{
     -fx-pref-width: 530px;
     -fx-pref-height: 720px;
     -fx-fill: #fff;
 }
+.rectangle_bar{
+    -fx-pref-width: 750px;
+    -fx-pref-height: 720px;
+    -fx-fill: #8989ff;
+    -fx-border-color: #04092b;
+}
+.barra {
+    -fx-pref-width: 1280px;
+    -fx-pref-height: 60px;
+    -fx-background-color: #04092b;
+}
+.barra_pesquisa {
+    -fx-pref-width: 500px;
+    -fx-pref-height: 30px;
+    -fx-background-color: #8989ff;
+}
 .title {
     -fx-text-fill: #04092B;
-    -fx-font-family: Inter;
+    -fx-font-family: Candara;
     -fx-font-size: 49px;
     -fx-font-style: normal;
     -fx-font-weight: 400;
@@ -43,15 +75,20 @@
 }
 .subtitle {
     -fx-text-fill: #04092B;
-    -fx-font-family: Inter;
+    -fx-font-family: Candara;
     -fx-font-size: 20px;
     -fx-font-style: normal;
     -fx-font-weight: 400;
     -fx-line-height: normal;
 }
+.image_box {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 200px;
+    -fx-background-color: #d9d9d9
+}
 .subtitle_white {
     -fx-text-fill: #fff;
-    -fx-font-family: Inter;
+    -fx-font-family: Candara;
     -fx-font-size: 20px;
     -fx-font-style: normal;
     -fx-font-weight: 400;
