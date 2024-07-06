@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 /**
  * Classe utilizada para representar uma plataforma para a qual um jogo foi
  * publicado.
@@ -9,6 +11,7 @@ public class Plataforma {
     private int id;
     private String nome;
     private String jogabilidade;
+    private ArrayList<Jogo> jogosLancados = new ArrayList<Jogo>();
 
     // Construtor
     public Plataforma(int id, String nome, String jogabilidade) {
@@ -32,6 +35,10 @@ public class Plataforma {
         this.jogabilidade = jogabilidade;
     }
 
+    public void setJogosLancados(ArrayList<Jogo> jogosLancados) {
+        this.jogosLancados = jogosLancados;
+    }
+
     // Getteres
 
     public int getId() {
@@ -44,6 +51,10 @@ public class Plataforma {
 
     public String getJogabilidade() {
         return jogabilidade;
+    }
+
+    public ArrayList<Jogo> getJogosLancados() {
+        return jogosLancados;
     }
 
 }// fim da classe Plataforma

@@ -1,10 +1,13 @@
 package model;
 
+import java.util.ArrayList;
+
 /** Classe utilizada para representar uma categorização de um jogo. */
 public class Genero {
     // Atributos
     private int id;
     private String nome;
+    private ArrayList<Jogo> jogos = new ArrayList<Jogo>();
 
     // Construtor
     public Genero(int id, String nome) {
@@ -23,6 +26,10 @@ public class Genero {
         this.nome = nome;
     }
 
+    public void setJogos(ArrayList<Jogo> jogos) {
+        this.jogos = jogos;
+    }
+
     // Getters
     public int getId() {
         return id;
@@ -30,6 +37,10 @@ public class Genero {
 
     public String getNome() {
         return nome;
+    }
+
+    public ArrayList<Jogo> getJogos() {
+        return jogos;
     }
 
 }// fim da classe Genero
