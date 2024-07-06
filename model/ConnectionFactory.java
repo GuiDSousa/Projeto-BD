@@ -20,12 +20,34 @@ public class ConnectionFactory {
     private static final String DB_URL = "";
 
     // Conexao do BD postgres
-    public Connection getConnection() throws SQLException {
+
+    private static Connection createConnection() {
+        Connection conexao = null;
+
         try {
-            Connection conexao = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            /* Obtem o driver de conexao com o banco de dados */
+            Class.forName("org.postgresql.Driver");
+            System.out.println("Driver carregado!");
+        } catch (ClassNotFoundException e) {
+            System.out.println("O driver especificado nao foi encontrado.");
+        }
+
+        try {
+            /* Tenta se conectar */
+            conexao = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            System.out.println("Conexao realizada com sucesso!");
+
+            /* Caso a conexao ocorra com sucesso, a conexao eh retornada */
             return conexao;
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("Nao foi possivel conectar ao banco de dados.");
+            return null;
         }
+
     }
+
+    public Connection getConnection() {
+        return createConnection();
+    }
+
 }
