@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="600.0" styleClass="pane_white" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="205.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_red" width="1280.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="67.0" layoutX="1101.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="circle" width="183.0" />
+      <Label layoutX="992.0" layoutY="630.0" styleClass="subtitle" />
+      <ToolBar layoutX="-162.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="false" prefHeight="40.0" prefWidth="1289.0" styleClass="barra">
+        <items>
+            <Button alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="login" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+          <Button alignment="TOP_CENTER" mnemonicParsing="false" styleClass="bar_button" text="cadastro">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="perfil" textAlignment="CENTER" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField alignment="CENTER_RIGHT" promptText="Explore a Crypta" styleClass="barra_pesquisa">
+               <font>
+                  <Font name="Candara" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+        </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="24.0" />
+         </padding>
+      </ToolBar>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="801.0" layoutY="17.0">
+         <image>
+            <Image url="@images/simbolo-de-interface-de-lupa-de-pesquisa.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="150.0" layoutX="172.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo_barra.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="234.0" layoutX="188.0" layoutY="339.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="311.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Rectangle>
+      <ImageView fitHeight="354.0" fitWidth="311.0" layoutX="188.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+         <image>
+            <Image url="@images/imagem-padrao.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Circle fill="DODGERBLUE" layoutX="236.0" layoutY="529.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label layoutX="214.0" layoutY="502.0" styleClass="score_game" text="00">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="186.0" layoutY="111.0" styleClass="title" text="Título">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button layoutX="188.0" layoutY="592.0" mnemonicParsing="false" prefWidth="289.0" styleClass="button_review" text="ADICIONAR REVIEW" />
+   </children>
+</AnchorPane>
