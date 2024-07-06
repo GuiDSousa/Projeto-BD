@@ -1,14 +1,16 @@
-package model;
+package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/* Classe para padronizar a criacao de conexoes com o BD
+/**
+ * Classe utilizada para padronizar a criacao de conexoes com o BD.
  *
  *
- * ATENÇÃO!!! Preencher as Strings com o nome do usuario do BD, a senha do BD e a URL do BD
-*/
+ * ATENÇÃO!!! Preencher as Strings com o nome do usuario do BD, a senha do BD e
+ * a URL do BD
+ */
 public class ConnectionFactory {
     // Usuario do banco de dados postgres
     private static final String USERNAME = "";
@@ -19,8 +21,7 @@ public class ConnectionFactory {
     // Caminho do BD
     private static final String DB_URL = "";
 
-    // Conexao do BD postgres
-
+    /** Metodo utilizado para padronizar a criacao de conexoes do BD postgres. */
     private static Connection createConnection() {
         Connection conexao = null;
 
@@ -43,11 +44,11 @@ public class ConnectionFactory {
             System.out.println("Nao foi possivel conectar ao banco de dados.");
             return null;
         }
+    }// fim do metodo createConnection
 
-    }
-
+    /** Metodo utilizado para fazer uma conexao com o BD. */
     public Connection getConnection() {
         return createConnection();
-    }
+    }// fim do metodo getConnection
 
-}
+}// fim da classe ConnectionFactory
