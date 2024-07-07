@@ -1,4 +1,5 @@
 package dao;
+
 import model.Usuario;
 
 import java.sql.*;
@@ -18,7 +19,7 @@ public class UsuarioDAO {
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, usuario.getNome());
-            pstmt.setBytes(2, usuario.getIconeDePerfil());
+            pstmt.setBytes(2, usuario.getImagemDePerfil());
             pstmt.setString(3, usuario.getEmail());
             pstmt.executeUpdate();
             return true;
@@ -28,7 +29,7 @@ public class UsuarioDAO {
         }
     }
 
-    public Usuario selectById(int id) { //pode retornar nulo
+    public Usuario selectById(int id) { // pode retornar nulo
         String SQL = "SELECT * FROM Usuario_Usu_logado_Usu_admin WHERE id_usuario = ?";
         Usuario usuario = null;
 
@@ -37,8 +38,8 @@ public class UsuarioDAO {
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next()) {
-                usuario = new Usuario(rs.getString("nome"), rs.getString("e_mail"), rs.getBytes("imag_usuario"));
-                usuario.setId(rs.getInt("id_usuario"));
+                usuario = new Usuario(rs.getInt("id_usuario"), rs.getString("nome"), rs.getString("e_mail"),
+                        rs.getBytes("imag_usuario"));
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -52,8 +53,8 @@ public class UsuarioDAO {
 
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
             while (rs.next()) {
-                Usuario usuario = new Usuario(rs.getString("nome"), rs.getString("e_mail"), rs.getBytes("imag_usuario"));
-                usuario.setId(rs.getInt("id_usuario"));
+                Usuario usuario = new Usuario(rs.getInt("id_usuario"), rs.getString("nome"), rs.getString("e_mail"),
+                        rs.getBytes("imag_usuario"));
                 usuarios.add(usuario);
             }
         } catch (SQLException ex) {
@@ -67,7 +68,7 @@ public class UsuarioDAO {
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, usuario.getNome());
-            pstmt.setBytes(2, usuario.getIconeDePerfil());
+            pstmt.setBytes(2, usuario.getImagemDePerfil());
             pstmt.setString(3, usuario.getEmail());
             pstmt.setInt(4, usuario.getId());
             pstmt.executeUpdate();

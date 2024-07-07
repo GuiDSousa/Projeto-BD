@@ -9,9 +9,9 @@ import model.Genero;
 public class GeneroDAO {
     private Connection connection;
 
-    private GeneroDAO()  {
-      ConnectionFactory connectionFactory = new ConnectionFactory();
-      this.connection = connectionFactory.getConnection();
+    private GeneroDAO() {
+        ConnectionFactory connectionFactory = new ConnectionFactory();
+        this.connection = connectionFactory.getConnection();
     }
 
     public boolean insert(Genero genero) {
@@ -36,8 +36,7 @@ public class GeneroDAO {
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next()) {
-                genero = new Genero(rs.getString("nome_genero"));
-                genero.setId(rs.getInt("id_genero"));
+                genero = new Genero(rs.getInt("id_genero"), rs.getString("nome_genero"));
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -51,8 +50,7 @@ public class GeneroDAO {
 
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
             while (rs.next()) {
-                Genero genero = new Genero(rs.getString("nome_genero"));
-                genero.setId(rs.getInt("id_genero"));
+                Genero genero = new Genero(rs.getInt("id_genero"), rs.getString("nome_genero"));
                 generos.add(genero);
             }
         } catch (SQLException ex) {
@@ -88,4 +86,3 @@ public class GeneroDAO {
         }
     }
 }
-

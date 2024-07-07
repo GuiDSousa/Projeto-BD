@@ -7,11 +7,11 @@ import java.util.List;
 import model.Plataforma;
 
 public class PlataformaDAO {
-    private Connection  connection;
+    private Connection connection;
 
-    private PlataformaDAO()  {
-      ConnectionFactory connectionFactory = new ConnectionFactory();
-      this.connection = connectionFactory.getConnection();
+    private PlataformaDAO() {
+        ConnectionFactory connectionFactory = new ConnectionFactory();
+        this.connection = connectionFactory.getConnection();
     }
 
     public boolean insert(Plataforma plataforma) {
@@ -37,11 +37,9 @@ public class PlataformaDAO {
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next()) {
-                plataforma = new Plataforma(
-                    rs.getString("nome_plataforma"),
-                    rs.getString("jogabilidade")
-                );
-                plataforma.setId(rs.getInt("id_plataforma"));
+                plataforma = new Plataforma(rs.getInt("id_plataforma"),
+                        rs.getString("nome_plataforma"),
+                        rs.getString("jogabilidade"));
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -55,11 +53,9 @@ public class PlataformaDAO {
 
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
             while (rs.next()) {
-                Plataforma plataforma = new Plataforma(
-                    rs.getString("nome_plataforma"),
-                    rs.getString("jogabilidade")
-                );
-                plataforma.setId(rs.getInt("id_plataforma"));
+                Plataforma plataforma = new Plataforma(rs.getInt("id_plataforma"),
+                        rs.getString("nome_plataforma"),
+                        rs.getString("jogabilidade"));
                 plataformas.add(plataforma);
             }
         } catch (SQLException ex) {

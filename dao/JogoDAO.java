@@ -10,8 +10,8 @@ public class JogoDAO {
     private Connection connection;
 
     private JogoDAO() {
-      ConnectionFactory connectionFactory = new ConnectionFactory();
-      this.connection = connectionFactory.getConnection();
+        ConnectionFactory connectionFactory = new ConnectionFactory();
+        this.connection = connectionFactory.getConnection();
     }
 
     public boolean insert(Jogo jogo) {
@@ -53,8 +53,7 @@ public class JogoDAO {
                         rs.getDouble("nota_critica"),
                         rs.getString("comentatio_critico"),
                         rs.getDate("data_publicacao"),
-                        rs.getDouble("nota_media_usuario")
-                );
+                        rs.getDouble("nota_media_usuario"));
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -69,16 +68,15 @@ public class JogoDAO {
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
             while (rs.next()) {
                 Jogo jogo = new Jogo(
-                              rs.getString("titulo_jogo"),
-                              rs.getDate("data_lancamento"),
-                              rs.getString("produtora"),
-                              rs.getString("sinopse"),
-                              rs.getBytes("imag_jogo"),
-                              rs.getDouble("nota_critica"),
-                              rs.getString("comentatio_critico"),
-                              rs.getDate("data_publicacao"),
-                              rs.getDouble("nota_media_usuario")
-                );
+                        rs.getString("titulo_jogo"),
+                        rs.getDate("data_lancamento"),
+                        rs.getString("produtora"),
+                        rs.getString("sinopse"),
+                        rs.getBytes("imag_jogo"),
+                        rs.getDouble("nota_critica"),
+                        rs.getString("comentatio_critico"),
+                        rs.getDate("data_publicacao"),
+                        rs.getDouble("nota_media_usuario"));
                 jogos.add(jogo);
             }
         } catch (SQLException ex) {
@@ -121,4 +119,3 @@ public class JogoDAO {
         }
     }
 }
-

@@ -10,8 +10,8 @@ public class AvaliacaoDAO {
     Connection connection;
 
     private AvaliacaoDAO() {
-      ConnectionFactory connectionFactory = new ConnectionFactory();
-      this.connection = connectionFactory.getConnection();
+        ConnectionFactory connectionFactory = new ConnectionFactory();
+        this.connection = connectionFactory.getConnection();
     }
 
     public boolean insert(Avaliacao avaliacao) {
@@ -19,8 +19,8 @@ public class AvaliacaoDAO {
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, avaliacao.getComentario());
-            pstmt.setString(2, avaliacao.getTituloJogo());
-            pstmt.setDouble(3, avaliacao.getNotaUsuario());
+            pstmt.setString(2, avaliacao.getTituloDoJogo());
+            pstmt.setDouble(3, avaliacao.getNotaDoUsuario());
             pstmt.executeUpdate();
             return true;
         } catch (SQLException ex) {
@@ -39,11 +39,10 @@ public class AvaliacaoDAO {
 
             if (rs.next()) {
                 avaliacao = new Avaliacao(
-                    rs.getInt("id_avaliacao"),
-                    rs.getString("comentario"),
-                    rs.getString("titulo_jogo"),
-                    rs.getDouble("nota_usuario")
-                );
+                        rs.getInt("id_avaliacao"),
+                        rs.getString("comentario"),
+                        rs.getString("titulo_jogo"),
+                        rs.getDouble("nota_usuario"));
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -58,11 +57,10 @@ public class AvaliacaoDAO {
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
             while (rs.next()) {
                 Avaliacao avaliacao = new Avaliacao(
-                    rs.getInt("id_avaliacao"),
-                    rs.getString("comentario"),
-                    rs.getString("titulo_jogo"),
-                    rs.getDouble("nota_usuario")
-                );
+                        rs.getInt("id_avaliacao"),
+                        rs.getString("comentario"),
+                        rs.getString("titulo_jogo"),
+                        rs.getDouble("nota_usuario"));
                 avaliacoes.add(avaliacao);
             }
         } catch (SQLException ex) {
@@ -76,9 +74,9 @@ public class AvaliacaoDAO {
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, avaliacao.getComentario());
-            pstmt.setString(2, avaliacao.getTituloJogo());
-            pstmt.setDouble(3, avaliacao.getNotaUsuario());
-            pstmt.setInt(4, avaliacao.getIdAvaliacao());
+            pstmt.setString(2, avaliacao.getTituloDoJogo());
+            pstmt.setDouble(3, avaliacao.getNotaDoUsuario());
+            pstmt.setInt(4, avaliacao.getId());
             pstmt.executeUpdate();
             return true;
         } catch (SQLException ex) {
@@ -100,4 +98,3 @@ public class AvaliacaoDAO {
         }
     }
 }
-
