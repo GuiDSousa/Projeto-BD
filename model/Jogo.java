@@ -1,7 +1,6 @@
 package model;
 
 import java.sql.Date;
-import java.util.ArrayList;
 
 /**
  * Classe utilizada para representar um jogo cadastrado no sistema e suas
@@ -18,9 +17,6 @@ public class Jogo {
     private String comentarioDaCritica;
     private Date dataDePublicacao;
     private double notaMediaDasAvaliacoes;
-    private ArrayList<Plataforma> plataformas = new ArrayList<Plataforma>();
-    private ArrayList<Genero> generos = new ArrayList<Genero>();
-    private ArrayList<Avaliacao> avaliacoesRecebidas = new ArrayList<Avaliacao>();
 
     // Construtor
     public Jogo(String titulo, Date dataDeLancamento, String produtora, String sinopse, byte[] imagemDeCapa,
@@ -75,18 +71,6 @@ public class Jogo {
         this.notaMediaDasAvaliacoes = notaMediaDasAvaliacoes;
     }
 
-    public void setPlataformas(ArrayList<Plataforma> plataformas) {
-        this.plataformas = plataformas;
-    }
-
-    public void setGeneros(ArrayList<Genero> generos) {
-        this.generos = generos;
-    }
-
-    public void setAvaliacoesRecebidas(ArrayList<Avaliacao> avaliacoesRecebidas) {
-        this.avaliacoesRecebidas = avaliacoesRecebidas;
-    }
-
     // Getters
     public String getTitulo() {
         return titulo;
@@ -122,18 +106,6 @@ public class Jogo {
 
     public double getNotaMediaDasAvaliacoes() {
         return notaMediaDasAvaliacoes;
-    }
-
-    public ArrayList<Plataforma> getPlataformas() {
-        return plataformas;
-    }
-
-    public ArrayList<Genero> getGeneros() {
-        return generos;
-    }
-
-    public ArrayList<Avaliacao> getAvaliacoesRecebidas() {
-        return avaliacoesRecebidas;
     }
 
 }// fim da classe Jogo

@@ -1,71 +1,59 @@
 package model;
 
-import java.sql.Date;
-
 /**
  * Classe utilizada para representar uma avaliacao feita por um usuario do
  * sistema.
  */
 public class Avaliacao {
     // Atributos
-    private Date dataDePublicacao;
-    private double nota;
+    private int id;
     private String comentario;
-    private Jogo jogoAvaliado;
-    private UsuarioCadastrado autor;
+    private String tituloDoJogo;
+    private double notaDoUsuario;
 
     // Construtor
-    public Avaliacao(Date dataDePublicacao, double nota, String comentario, Jogo jogoAvaliado,
-            UsuarioCadastrado autor) {
-        this.dataDePublicacao = dataDePublicacao;
-        this.nota = nota;
+    public Avaliacao(int id, String comentario, String tituloDoJogo, double notaDoUsuario) {
+        this.id = id;
         this.comentario = comentario;
-        this.jogoAvaliado = jogoAvaliado;
-        this.autor = autor;
+        this.tituloDoJogo = tituloDoJogo;
+        this.notaDoUsuario = notaDoUsuario;
     }// fim do construtor
 
     // Metodos
 
     // Setters
-    public void setDataDePublicacao(Date dataDePublicacao) {
-        this.dataDePublicacao = dataDePublicacao;
-    }
 
-    public void setNota(double nota) {
-        this.nota = nota;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setComentario(String comentario) {
         this.comentario = comentario;
     }
 
-    public void setJogoAvaliado(Jogo jogoAvaliado) {
-        this.jogoAvaliado = jogoAvaliado;
+    public void setTituloDoJogo(String tituloDoJogo) {
+        this.tituloDoJogo = tituloDoJogo;
     }
 
-    public void setAutor(UsuarioCadastrado autor) {
-        this.autor = autor;
+    public void setNotaDoUsuario(double notaDoUsuario) {
+        this.notaDoUsuario = notaDoUsuario;
     }
 
     // Getters
-    public Date getDataDePublicacao() {
-        return dataDePublicacao;
-    }
-
-    public double getNota() {
-        return nota;
+    public int getId() {
+        return id;
     }
 
     public String getComentario() {
         return comentario;
     }
 
-    public Jogo getJogoAvaliado() {
-        return jogoAvaliado;
+    public String getTituloDoJogo() {
+        return tituloDoJogo;
     }
 
-    public UsuarioCadastrado getAutor() {
-        return autor;
+    public double getNotaDoUsuario() {
+        return notaDoUsuario;
     }
 
 }// fim da classe Avaliacao

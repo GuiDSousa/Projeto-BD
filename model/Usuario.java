@@ -6,25 +6,23 @@ public class Usuario {
     private int id;
     private String nome;
     private String email;
-    private byte[] iconeDePerfil;
+    private byte[] imagemDePerfil;
 
     // Construtor
-    public Usuario(String nome, String email, byte[] iconeDePerfil) {
+    public Usuario(int id, String nome, String email, byte[] imagemDePerfil) {
+        this.id = id;
         this.nome = nome;
         this.email = email;
-        this.iconeDePerfil = iconeDePerfil;
+        this.imagemDePerfil = imagemDePerfil;
     }// fim do construtor
 
     // Metodos
-    public void cadastrarUsuario(Usuario usuario) {
-
-    }
 
     // Setters
     public void setId(int id) {
         this.id = id;
     }
-    
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -33,8 +31,8 @@ public class Usuario {
         this.email = email;
     }
 
-    public void setIconeDePerfil(byte[] iconeDePerfil) {
-        this.iconeDePerfil = iconeDePerfil;
+    public void setImagemDePerfil(byte[] imagemDePerfil) {
+        this.imagemDePerfil = imagemDePerfil;
     }
 
     // Getters
@@ -50,8 +48,8 @@ public class Usuario {
         return email;
     }
 
-    public byte[] getIconeDePerfil() {
-        return iconeDePerfil;
+    public byte[] getImagemDePerfil() {
+        return imagemDePerfil;
     }
 
 }// fim da classe Usuario
