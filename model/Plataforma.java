@@ -14,8 +14,7 @@ public class Plataforma {
     private ArrayList<Jogo> jogosLancados = new ArrayList<Jogo>();
 
     // Construtor
-    public Plataforma(int id, String nome, String jogabilidade) {
-        this.id = id;
+    public Plataforma(String nome, String jogabilidade) {
         this.nome = nome;
         this.jogabilidade = jogabilidade;
     }// fim do construtor
@@ -23,10 +22,6 @@ public class Plataforma {
     // Metodos
 
     // Setters
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
     }

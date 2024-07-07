@@ -11,8 +11,8 @@ public class UsuarioCadastrado extends Usuario {
     private ArrayList<Avaliacao> avaliacoesFeitas = new ArrayList<Avaliacao>();
 
     // Construtor
-    public UsuarioCadastrado(int id, String nome, String email, byte[] iconeDePerfil) {
-        super(id, nome, email, iconeDePerfil);
+    public UsuarioCadastrado(String nome, String email, byte[] iconeDePerfil) {
+        super(nome, email, iconeDePerfil);
         // TODO Auto-generated constructor stub
     }// fim do construtor
 

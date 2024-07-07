@@ -10,18 +10,13 @@ public class Genero {
     private ArrayList<Jogo> jogos = new ArrayList<Jogo>();
 
     // Construtor
-    public Genero(int id, String nome) {
-        this.id = id;
+    public Genero(String nome) {
         this.nome = nome;
     }// fim do Construtor
 
     // Metodos
 
     // Setters
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
     }

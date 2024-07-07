@@ -9,20 +9,18 @@ public class Usuario {
     private byte[] iconeDePerfil;
 
     // Construtor
-    public Usuario(int id, String nome, String email, byte[] iconeDePerfil) {
-        this.id = id;
+    public Usuario(String nome, String email, byte[] iconeDePerfil) {
         this.nome = nome;
         this.email = email;
         this.iconeDePerfil = iconeDePerfil;
     }// fim do construtor
 
     // Metodos
+    public void cadastrarUsuario(Usuario usuario) {
 
-    // Setters
-    public void setId(int id) {
-        this.id = id;
     }
 
+    // Setters
     public void setNome(String nome) {
         this.nome = nome;
     }
