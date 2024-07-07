@@ -12,16 +12,19 @@ public class Principal extends Application {
         launch(args);
     }
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("tela-login.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("tela-login.fxml"));
+
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
+
+        Image iconeJanela = new Image("images/esboço-logo-export.png");
+        primaryStage.getIcons().add(iconeJanela);
         primaryStage.setTitle("Crypta Nostalgica");
-        primaryStage.show();
-        // bloqueia o redimensionamento da tela
-        primaryStage.setResizable(false);
+        primaryStage.setResizable(false);// bloqueia o redimensionamento da tela
         primaryStage.centerOnScreen();
-        primaryStage.getIcons().add(new Image("images/esboço-logo-export.png"));
+
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
 }
