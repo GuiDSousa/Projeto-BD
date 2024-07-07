@@ -14,7 +14,7 @@ public class Jogo {
     private String produtora;
     private String sinopse;
     private byte[] imagemDeCapa;
-    private int notaDaCritica;
+    private double notaDaCritica;
     private String comentarioDaCritica;
     private Date dataDePublicacao;
     private double notaMediaDasAvaliacoes;
@@ -24,7 +24,7 @@ public class Jogo {
 
     // Construtor
     public Jogo(String titulo, Date dataDeLancamento, String produtora, String sinopse, byte[] imagemDeCapa,
-            int notaDaCritica, String comentarioDaCritica, Date dataDePublicacao, double notaMediaDasAvaliacoes) {
+            double notaDaCritica, String comentarioDaCritica, Date dataDePublicacao, double notaMediaDasAvaliacoes) {
         this.titulo = titulo;
         this.dataDeLancamento = dataDeLancamento;
         this.produtora = produtora;
@@ -108,7 +108,7 @@ public class Jogo {
         return imagemDeCapa;
     }
 
-    public int getNotaDaCritica() {
+    public double getNotaDaCritica() {
         return notaDaCritica;
     }
 
