@@ -3,8 +3,12 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -21,22 +25,9 @@
          </cursor>
       </Rectangle>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="67.0" layoutX="1101.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="circle" width="183.0" />
-      <Label layoutX="992.0" layoutY="630.0" styleClass="subtitle" />
+      <Label layoutX="995.0" layoutY="655.0" styleClass="subtitle" />
       <ToolBar layoutX="-162.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="false" prefHeight="40.0" prefWidth="1289.0" styleClass="barra">
         <items>
-            <Button alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="login" textAlignment="CENTER">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-          <Button alignment="TOP_CENTER" mnemonicParsing="false" styleClass="bar_button" text="cadastro">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
             <Button alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="perfil" textAlignment="CENTER" visible="false">
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -83,7 +74,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Button layoutX="188.0" layoutY="630.0" mnemonicParsing="false" prefWidth="289.0" styleClass="button_review" text="ADICIONAR REVIEW">
+      <Button layoutX="868.0" layoutY="507.0" mnemonicParsing="false" prefWidth="289.0" styleClass="button_review" text="Adicionar">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -101,68 +92,94 @@
       </TextArea>
       <Label layoutX="519.0" layoutY="450.0" styleClass="subtitle_bold" text="Sinopse:" />
       <Label layoutX="519.0" layoutY="376.0" styleClass="subtitle_bold" text="Plataforma(s):" />
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="840.0" layoutY="180.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="278.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Rectangle>
-      <TextArea editable="false" layoutX="918.0" layoutY="167.0" prefHeight="123.0" prefWidth="209.0" styleClass="comment_area" text="Um jogo absolutamente incrível, sem precedentes, nunca antes visto pela humanidade" wrapText="true">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </TextArea>
-      <Circle fill="DODGERBLUE" layoutX="878.0" layoutY="230.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Circle>
-      <Label layoutX="856.0" layoutY="203.0" styleClass="score_game" text="00">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Label>
-      <Label layoutX="979.0" layoutY="268.0" styleClass="subtitle" text="NoobMaster69" textAlignment="RIGHT" />
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="840.0" layoutY="337.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="278.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Rectangle>
-      <TextArea editable="false" layoutX="918.0" layoutY="324.0" prefHeight="123.0" prefWidth="209.0" styleClass="comment_area" text="Absolute Cinema" wrapText="true">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </TextArea>
-      <Circle fill="DODGERBLUE" layoutX="878.0" layoutY="387.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Circle>
-      <Label layoutX="856.0" layoutY="360.0" styleClass="score_game" text="00">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Label>
-      <Label layoutX="979.0" layoutY="425.0" styleClass="subtitle" text="AboveVlr" textAlignment="RIGHT" />
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="840.0" layoutY="491.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="278.0">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Rectangle>
-      <TextArea editable="false" layoutX="918.0" layoutY="478.0" prefHeight="123.0" prefWidth="209.0" styleClass="comment_area" text="Podre, você deveria ter vergonha de ter jogado isso um dia" wrapText="true">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </TextArea>
-      <Circle fill="DODGERBLUE" layoutX="878.0" layoutY="541.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Circle>
-      <Label layoutX="856.0" layoutY="514.0" styleClass="score_game" text="00">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Label>
-      <Label layoutX="979.0" layoutY="579.0" styleClass="subtitle" text="Mata Noob" textAlignment="RIGHT" />
+    <Button layoutX="862.0" layoutY="247.0" mnemonicParsing="false" styleClass="admin_button" text="Selecionar Imagem" />
+      <TextField layoutX="862.0" layoutY="306.0" promptText="Adicionar Título" styleClass="admin_text_field" />
+      <TextField layoutX="862.0" layoutY="369.0" promptText="Adicionar Sinopse" styleClass="admin_text_field" />
+      <TextField layoutX="1029.0" layoutY="245.0" promptText="Adicionar data dd/mm/aaaa" styleClass="admin_text_field" />
+      <TextField layoutX="1029.0" layoutY="306.0" promptText="Adicionar nota" styleClass="admin_text_field" />
+      <TextField layoutX="1029.0" layoutY="371.0" promptText="Adicionar comentário" styleClass="admin_text_field" />
+      <MenuButton layoutX="862.0" layoutY="440.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="320.0" styleClass="admin_menu_button" text="Plataforma">
+         <items>
+            <MenuItem mnemonicParsing="false" text="PlayStation 1">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="PlayStation 2">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="PSP">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="PC">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Nintendo 64">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="GameBoy">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Super Nintendo">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="1029.0" layoutY="440.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="320.0" styleClass="admin_menu_button" text="Gênero">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Ação">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Aventura">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Corrida">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Estratégia">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Esporte">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Fantasia">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="RPG">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" text="Shooter">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic>
+            </MenuItem>
+         </items>
+      </MenuButton>
    </children>
 </AnchorPane>

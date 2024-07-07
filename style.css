@@ -227,3 +227,41 @@
     -fx-border-color: #d4d4d4;
 }
 
+/* Exclusivos da tela de Administração */
+.admin_pane {
+    -fx-pref-width: 500px;
+    -fx-pref-height: 720px;
+    -fx-background-color: #fff;
+}
+.admin_text_field {
+    -fx-pref-width: 150px;
+    -fx-pref-height: 50px;
+    -fx-background-color: #eeeeee;
+    -fx-border-color: #04092b;
+
+}
+
+.admin_button {
+    -fx-text-fill: #fff;
+    -fx-font-family: Candara;
+    -fx-font-size: 13px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+    -fx-background-color: #04092b;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 50px;
+}
+
+.admin_menu_button {
+    -fx-text-fill: #04092B;
+    -fx-font-family: Candara;
+    -fx-font-size: 13px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+    -fx-background-color: #fff;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 50px;
+    -fx-border-color: #ccc;
+}
