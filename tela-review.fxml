@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="600.0" styleClass="review_pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="154.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_red" width="700.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Rectangle>
+      <ImageView fitHeight="141.0" fitWidth="264.0" layoutX="45.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo_barra.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="342.0" layoutY="51.0" styleClass="title" text="Game Review" textAlignment="RIGHT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button layoutX="187.0" layoutY="391.0" mnemonicParsing="false" prefWidth="289.0" styleClass="button_review" text="ENVIAR REVIEW">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField alignment="TOP_LEFT" layoutX="73.0" layoutY="192.0" prefHeight="142.0" prefWidth="555.0" promptText="Conte a sua experiência (opcional)" styleClass="text_field_review" />
+      <MenuButton layoutX="428.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" styleClass="menu_button" text="Selecionar plataforma">
+        <items>
+          <MenuItem mnemonicParsing="false" text="PlayStation 1" />
+            <MenuItem mnemonicParsing="false" text="PlayStation 2" />
+            <MenuItem mnemonicParsing="false" text="PSP" />
+          <MenuItem mnemonicParsing="false" text="PC" />
+            <MenuItem mnemonicParsing="false" text="Nintendo 64" />
+            <MenuItem mnemonicParsing="false" text="GameBoy" />
+        </items>
+      </MenuButton>
+      <ImageView fitHeight="239.0" fitWidth="264.0" layoutX="76.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/estrelas.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="82.0" layoutY="314.0" mnemonicParsing="false" opacity="0.0" prefHeight="20.0" prefWidth="6.0" styleClass="mini_button" text="1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="129.0" layoutY="314.0" mnemonicParsing="false" opacity="0.0" prefHeight="20.0" prefWidth="6.0" styleClass="mini_button" text="2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="179.0" layoutY="314.0" mnemonicParsing="false" opacity="0.0" prefHeight="20.0" prefWidth="6.0" styleClass="mini_button" text="3">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="227.0" layoutY="314.0" mnemonicParsing="false" opacity="0.0" prefHeight="20.0" prefWidth="6.0" styleClass="mini_button" text="4">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="276.0" layoutY="314.0" mnemonicParsing="false" opacity="0.0" prefHeight="20.0" prefWidth="6.0" styleClass="mini_button" text="5">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="498.0" layoutY="110.0" styleClass="subtitle" text="Nome do Jogo" textAlignment="RIGHT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>
