@@ -1,0 +1,1 @@
+/* Execute o script a seguir para povoar corretamente o Banco de Dados para a aplicacao.*/
