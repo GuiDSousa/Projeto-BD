@@ -15,11 +15,10 @@ public class PlataformaDAO {
     }
 
     public boolean insert(Plataforma plataforma) {
-        String SQL = "INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma, jogabilidade) VALUES(?, ?)";
+        String SQL = "INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma) VALUES(?, ?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, plataforma.getNome());
-            pstmt.setString(2, plataforma.getJogabilidade());
             pstmt.executeUpdate();
             return true;
         } catch (SQLException ex) {
@@ -38,8 +37,7 @@ public class PlataformaDAO {
 
             if (rs.next()) {
                 plataforma = new Plataforma(rs.getInt("id_plataforma"),
-                        rs.getString("nome_plataforma"),
-                        rs.getString("jogabilidade"));
+                        rs.getString("nome_plataforma"));
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -54,8 +52,7 @@ public class PlataformaDAO {
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
             while (rs.next()) {
                 Plataforma plataforma = new Plataforma(rs.getInt("id_plataforma"),
-                        rs.getString("nome_plataforma"),
-                        rs.getString("jogabilidade"));
+                        rs.getString("nome_plataforma"));
                 plataformas.add(plataforma);
             }
         } catch (SQLException ex) {
@@ -65,12 +62,11 @@ public class PlataformaDAO {
     }
 
     public boolean update(Plataforma plataforma) {
-        String SQL = "UPDATE crypta_nostalgica.Plataforma SET nome_plataforma = ?, jogabilidade = ? WHERE id_plataforma = ?";
+        String SQL = "UPDATE crypta_nostalgica.Plataforma SET nome_plataforma = ?, WHERE id_plataforma = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, plataforma.getNome());
-            pstmt.setString(2, plataforma.getJogabilidade());
-            pstmt.setInt(3, plataforma.getId());
+            pstmt.setInt(2, plataforma.getId());
             pstmt.executeUpdate();
             return true;
         } catch (SQLException ex) {

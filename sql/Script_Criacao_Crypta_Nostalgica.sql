@@ -1,10 +1,10 @@
 /* Execute o script a seguir para criar corretamente o esquema e as tabelas do Banco de Dados 
-para a aplicacao.*/
+ para a aplicacao.*/
 
---Criacao do esquema
-CREATE SCHEMA IF NOT EXISTS crypta_nostalgica 
 
--- Criacao das tabelas para o esquema "crypta_nostalgica"
+CREATE SCHEMA IF NOT EXISTS crypta_nostalgica --Criacao do esquema
+
+/* Criacao das tabelas para o esquema "crypta_nostalgica"*/
 CREATE TABLE IF NOT EXISTS crypta_nostalgica.Usuario_Usu_logado_Usu_admin (
     id_usuario SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
@@ -58,7 +58,6 @@ CREATE TABLE IF NOT EXISTS crypta_nostalgica.jogo_genero (
 CREATE TABLE IF NOT EXISTS crypta_nostalgica.Plataforma (
     id_plataforma SERIAL PRIMARY KEY,
     nome_plataforma VARCHAR(64) NOT NULL,
-    jogabilidade VARCHAR(64)
 );
 
 CREATE TABLE IF NOT EXISTS crypta_nostalgica.Jogo_plataforma (
