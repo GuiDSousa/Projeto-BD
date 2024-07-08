@@ -15,7 +15,7 @@ public class PlataformaDAO {
     }
 
     public boolean insert(Plataforma plataforma) {
-        String SQL = "INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma) VALUES(?, ?)";
+        String SQL = "INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma) VALUES(?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, plataforma.getNome());
