@@ -22,13 +22,16 @@ public class ConnectionFactory {
     // Caminho do BD
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
 
+    // Driver de conexao com o postrgres
+    private static final String DRIVER = "org.postgresql.Driver";
+
     /** Metodo utilizado para padronizar a criacao de conexoes do BD postgres. */
     private static Connection createConnection() {
         Connection conexao = null;
 
         try {
             /* Obtem o driver de conexao com o banco de dados */
-            Class.forName("org.postgresql.Driver");
+            Class.forName(DRIVER);
             System.out.println("Driver carregado!");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
