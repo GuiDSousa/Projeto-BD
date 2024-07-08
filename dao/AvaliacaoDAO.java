@@ -14,7 +14,7 @@ public class AvaliacaoDAO {
     }
 
     public boolean insert(Avaliacao avaliacao) {
-        String SQL = "INSERT INTO Avaliacao(comentario, titulo_jogo, nota_usuario, id_usuario) VALUES(?, ?, ?, ?)";
+        String SQL = "INSERT INTO crypta_nostalgica.Avaliacao(comentario, titulo_jogo, nota_usuario, id_usuario) VALUES(?, ?, ?, ?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, avaliacao.getComentario());
@@ -30,7 +30,7 @@ public class AvaliacaoDAO {
     }
 
     public Avaliacao selectById(int id) {
-        String SQL = "SELECT * FROM Avaliacao WHERE id_avaliacao = ?";
+        String SQL = "SELECT * FROM crypta_nostalgica.Avaliacao WHERE id_avaliacao = ?";
         Avaliacao avaliacao = null;
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
@@ -52,7 +52,7 @@ public class AvaliacaoDAO {
     }
 
     public List<Avaliacao> selectAll() {
-        String SQL = "SELECT * FROM Avaliacao";
+        String SQL = "SELECT * FROM crypta_nostalgica.Avaliacao";
         List<Avaliacao> avaliacoes = new ArrayList<>();
 
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
@@ -72,7 +72,7 @@ public class AvaliacaoDAO {
     }
 
     public boolean update(Avaliacao avaliacao) {
-        String SQL = "UPDATE Avaliacao SET comentario = ?, titulo_jogo = ?, nota_usuario = ?, id_usuario = ? WHERE id_avaliacao = ?";
+        String SQL = "UPDATE crypta_nostalgica.Avaliacao SET comentario = ?, titulo_jogo = ?, nota_usuario = ?, id_usuario = ? WHERE id_avaliacao = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, avaliacao.getComentario());
@@ -89,7 +89,7 @@ public class AvaliacaoDAO {
     }
 
     public boolean delete(int id) {
-        String SQL = "DELETE FROM Avaliacao WHERE id_avaliacao = ?";
+        String SQL = "DELETE FROM crypta_nostalgica.Avaliacao WHERE id_avaliacao = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setInt(1, id);
@@ -100,4 +100,5 @@ public class AvaliacaoDAO {
             return false;
         }
     }
-}
+
+}// fim da classe AvaliacaoDAO

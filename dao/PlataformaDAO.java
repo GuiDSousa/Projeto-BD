@@ -15,7 +15,7 @@ public class PlataformaDAO {
     }
 
     public boolean insert(Plataforma plataforma) {
-        String SQL = "INSERT INTO Plataforma(nome_plataforma, jogabilidade) VALUES(?, ?)";
+        String SQL = "INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma, jogabilidade) VALUES(?, ?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, plataforma.getNome());
@@ -29,7 +29,7 @@ public class PlataformaDAO {
     }
 
     public Plataforma selectById(int id) {
-        String SQL = "SELECT * FROM Plataforma WHERE id_plataforma = ?";
+        String SQL = "SELECT * FROM crypta_nostalgica.Plataforma WHERE id_plataforma = ?";
         Plataforma plataforma = null;
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
@@ -48,7 +48,7 @@ public class PlataformaDAO {
     }
 
     public List<Plataforma> selectAll() {
-        String SQL = "SELECT * FROM Plataforma";
+        String SQL = "SELECT * FROM crypta_nostalgica.Plataforma";
         List<Plataforma> plataformas = new ArrayList<>();
 
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
@@ -65,7 +65,7 @@ public class PlataformaDAO {
     }
 
     public boolean update(Plataforma plataforma) {
-        String SQL = "UPDATE Plataforma SET nome_plataforma = ?, jogabilidade = ? WHERE id_plataforma = ?";
+        String SQL = "UPDATE crypta_nostalgica.Plataforma SET nome_plataforma = ?, jogabilidade = ? WHERE id_plataforma = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, plataforma.getNome());
@@ -80,7 +80,7 @@ public class PlataformaDAO {
     }
 
     public boolean delete(int id) {
-        String SQL = "DELETE FROM Plataforma WHERE id_plataforma = ?";
+        String SQL = "DELETE FROM crypta_nostalgica.Plataforma WHERE id_plataforma = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setInt(1, id);
@@ -91,4 +91,5 @@ public class PlataformaDAO {
             return false;
         }
     }
-}
+
+}// fim da classe PlataformaDAO

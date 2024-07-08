@@ -9,12 +9,12 @@ public class JogoGeneroDAO {
     private Connection connection;
 
     private JogoGeneroDAO() {
-      ConnectionFactory connectionFactory = new ConnectionFactory();
-      this.connection = connectionFactory.getConnection();
+        ConnectionFactory connectionFactory = new ConnectionFactory();
+        this.connection = connectionFactory.getConnection();
     }
 
     public boolean insert(JogoGenero jogoGenero) {
-        String SQL = "INSERT INTO jogo_genero(titulo_jogo, id_genero) VALUES(?, ?)";
+        String SQL = "INSERT INTO crypta_nostalgica.jogo_genero(titulo_jogo, id_genero) VALUES(?, ?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, jogoGenero.getTituloJogo());
@@ -28,7 +28,7 @@ public class JogoGeneroDAO {
     }
 
     public JogoGenero selectById(int id) {
-        String SQL = "SELECT * FROM jogo_genero WHERE id = ?";
+        String SQL = "SELECT * FROM crypta_nostalgica.jogo_genero WHERE id = ?";
         JogoGenero jogoGenero = null;
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
@@ -37,10 +37,9 @@ public class JogoGeneroDAO {
 
             if (rs.next()) {
                 jogoGenero = new JogoGenero(
-                    rs.getInt("id"),
-                    rs.getString("titulo_jogo"),
-                    rs.getInt("id_genero")
-                );
+                        rs.getInt("id"),
+                        rs.getString("titulo_jogo"),
+                        rs.getInt("id_genero"));
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -49,16 +48,15 @@ public class JogoGeneroDAO {
     }
 
     public List<JogoGenero> selectAll() {
-        String SQL = "SELECT * FROM jogo_genero";
+        String SQL = "SELECT * FROM crypta_nostalgica.jogo_genero";
         List<JogoGenero> jogoGeneros = new ArrayList<>();
 
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
             while (rs.next()) {
                 JogoGenero jogoGenero = new JogoGenero(
-                    rs.getInt("id"),
-                    rs.getString("titulo_jogo"),
-                    rs.getInt("id_genero")
-                );
+                        rs.getInt("id"),
+                        rs.getString("titulo_jogo"),
+                        rs.getInt("id_genero"));
                 jogoGeneros.add(jogoGenero);
             }
         } catch (SQLException ex) {
@@ -68,7 +66,7 @@ public class JogoGeneroDAO {
     }
 
     public boolean update(JogoGenero jogoGenero) {
-        String SQL = "UPDATE jogo_genero SET titulo_jogo = ?, id_genero = ? WHERE id = ?";
+        String SQL = "UPDATE crypta_nostalgica.jogo_genero SET titulo_jogo = ?, id_genero = ? WHERE id = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, jogoGenero.getTituloJogo());
@@ -83,7 +81,7 @@ public class JogoGeneroDAO {
     }
 
     public boolean delete(int id) {
-        String SQL = "DELETE FROM jogo_genero WHERE id = ?";
+        String SQL = "DELETE FROM crypta_nostalgica.jogo_genero WHERE id = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setInt(1, id);
@@ -94,4 +92,5 @@ public class JogoGeneroDAO {
             return false;
         }
     }
-}
+
+}// fim da classe JogoGeneroDAO

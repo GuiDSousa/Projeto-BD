@@ -7,14 +7,14 @@ import java.util.List;
 
 public class JogoPlataformaDAO {
     private Connection connection;
-  
+
     private JogoPlataformaDAO() {
-      ConnectionFactory connectionFactory = new ConnectionFactory();
-      this.connection = connectionFactory.getConnection();
+        ConnectionFactory connectionFactory = new ConnectionFactory();
+        this.connection = connectionFactory.getConnection();
     }
-  
+
     public boolean insert(JogoPlataforma jogoPlataforma) {
-        String SQL = "INSERT INTO Jogo_plataforma(id_plataforma, titulo_jogo) VALUES(?, ?)";
+        String SQL = "INSERT INTO crypta_nostalgica.Jogo_plataforma(id_plataforma, titulo_jogo) VALUES(?, ?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setInt(1, jogoPlataforma.getIdPlataforma());
@@ -28,7 +28,7 @@ public class JogoPlataformaDAO {
     }
 
     public JogoPlataforma selectById(int id) {
-        String SQL = "SELECT * FROM Jogo_plataforma WHERE id = ?";
+        String SQL = "SELECT * FROM crypta_nostalgica.Jogo_plataforma WHERE id = ?";
         JogoPlataforma jogoPlataforma = null;
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
@@ -37,10 +37,9 @@ public class JogoPlataformaDAO {
 
             if (rs.next()) {
                 jogoPlataforma = new JogoPlataforma(
-                    rs.getInt("id"),
-                    rs.getInt("id_plataforma"),
-                    rs.getString("titulo_jogo")
-                );
+                        rs.getInt("id"),
+                        rs.getInt("id_plataforma"),
+                        rs.getString("titulo_jogo"));
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -49,16 +48,15 @@ public class JogoPlataformaDAO {
     }
 
     public List<JogoPlataforma> selectAll() {
-        String SQL = "SELECT * FROM Jogo_plataforma";
+        String SQL = "SELECT * FROM crypta_nostalgica.Jogo_plataforma";
         List<JogoPlataforma> jogoPlataformas = new ArrayList<>();
 
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
             while (rs.next()) {
                 JogoPlataforma jogoPlataforma = new JogoPlataforma(
-                    rs.getInt("id"),
-                    rs.getInt("id_plataforma"),
-                    rs.getString("titulo_jogo")
-                );
+                        rs.getInt("id"),
+                        rs.getInt("id_plataforma"),
+                        rs.getString("titulo_jogo"));
                 jogoPlataformas.add(jogoPlataforma);
             }
         } catch (SQLException ex) {
@@ -68,7 +66,7 @@ public class JogoPlataformaDAO {
     }
 
     public boolean update(JogoPlataforma jogoPlataforma) {
-        String SQL = "UPDATE Jogo_plataforma SET id_plataforma = ?, titulo_jogo = ? WHERE id = ?";
+        String SQL = "UPDATE crypta_nostalgica.Jogo_plataforma SET id_plataforma = ?, titulo_jogo = ? WHERE id = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setInt(1, jogoPlataforma.getIdPlataforma());
@@ -83,7 +81,7 @@ public class JogoPlataformaDAO {
     }
 
     public boolean delete(int id) {
-        String SQL = "DELETE FROM Jogo_plataforma WHERE id = ?";
+        String SQL = "DELETE FROM crypta_nostalgica.Jogo_plataforma WHERE id = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setInt(1, id);
@@ -94,4 +92,5 @@ public class JogoPlataformaDAO {
             return false;
         }
     }
-}
+
+}// fim da classe JogoPlataformaDAO

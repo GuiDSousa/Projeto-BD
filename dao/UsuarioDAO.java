@@ -15,7 +15,7 @@ public class UsuarioDAO {
     }
 
     public boolean insert(Usuario usuario) {
-        String SQL = "INSERT INTO Usuario_Usu_logado_Usu_admin(nome, imag_usuario, e_mail) VALUES(?, ?, ?)";
+        String SQL = "INSERT INTO crypta_nostalgica.Usuario_Usu_logado_Usu_admin(nome, imag_usuario, e_mail) VALUES(?, ?, ?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, usuario.getNome());
@@ -30,7 +30,7 @@ public class UsuarioDAO {
     }
 
     public Usuario selectById(int id) { // pode retornar nulo
-        String SQL = "SELECT * FROM Usuario_Usu_logado_Usu_admin WHERE id_usuario = ?";
+        String SQL = "SELECT * FROM crypta_nostalgica.Usuario_Usu_logado_Usu_admin WHERE id_usuario = ?";
         Usuario usuario = null;
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
@@ -48,7 +48,7 @@ public class UsuarioDAO {
     }
 
     public List<Usuario> selectAll() {
-        String SQL = "SELECT * FROM Usuario_Usu_logado_Usu_admin";
+        String SQL = "SELECT * FROM crypta_nostalgica.Usuario_Usu_logado_Usu_admin";
         List<Usuario> usuarios = new ArrayList<>();
 
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
@@ -64,7 +64,7 @@ public class UsuarioDAO {
     }
 
     public boolean update(Usuario usuario) {
-        String SQL = "UPDATE Usuario_Usu_logado_Usu_admin SET nome = ?, imag_usuario = ?, e_mail = ? WHERE id_usuario = ?";
+        String SQL = "UPDATE crypta_nostalgica.Usuario_Usu_logado_Usu_admin SET nome = ?, imag_usuario = ?, e_mail = ? WHERE id_usuario = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, usuario.getNome());
@@ -80,7 +80,7 @@ public class UsuarioDAO {
     }
 
     public boolean delete(int id) {
-        String SQL = "DELETE FROM Usuario_Usu_logado_Usu_admin WHERE id_usuario = ?";
+        String SQL = "DELETE FROM crypta_nostalgica.Usuario_Usu_logado_Usu_admin WHERE id_usuario = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setInt(1, id);
@@ -91,4 +91,5 @@ public class UsuarioDAO {
             return false;
         }
     }
-}
+
+}// fim da classe UsuarioDAO

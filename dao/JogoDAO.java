@@ -15,7 +15,7 @@ public class JogoDAO {
     }
 
     public boolean insert(Jogo jogo) {
-        String SQL = "INSERT INTO Jogo(titulo_jogo, data_lancamento, imag_jogo, sinopse, produtora, nota_critica, data_publicacao, nota_media_usuario, comentatio_critico) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String SQL = "INSERT INTO crypta_nostalgica.Jogo(titulo_jogo, data_lancamento, imag_jogo, sinopse, produtora, nota_critica, data_publicacao, nota_media_usuario, comentatio_critico) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, jogo.getTitulo());
@@ -36,7 +36,7 @@ public class JogoDAO {
     }
 
     public Jogo selectByTitulo(String titulo) {
-        String SQL = "SELECT * FROM Jogo WHERE titulo_jogo = ?";
+        String SQL = "SELECT * FROM crypta_nostalgica.Jogo WHERE titulo_jogo = ?";
         Jogo jogo = null;
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
@@ -62,7 +62,7 @@ public class JogoDAO {
     }
 
     public List<Jogo> selectAll() {
-        String SQL = "SELECT * FROM Jogo";
+        String SQL = "SELECT * FROM crypta_nostalgica.Jogo";
         List<Jogo> jogos = new ArrayList<>();
 
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
@@ -86,7 +86,7 @@ public class JogoDAO {
     }
 
     public boolean update(Jogo jogo) {
-        String SQL = "UPDATE Jogo SET data_lancamento = ?, imag_jogo = ?, sinopse = ?, produtora = ?, nota_critica = ?, data_publicacao = ?, nota_media_usuario = ?, comentatio_critico = ? WHERE titulo_jogo = ?";
+        String SQL = "UPDATE crypta_nostalgica.Jogo SET data_lancamento = ?, imag_jogo = ?, sinopse = ?, produtora = ?, nota_critica = ?, data_publicacao = ?, nota_media_usuario = ?, comentatio_critico = ? WHERE titulo_jogo = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setDate(1, jogo.getDataDeLancamento());
@@ -107,7 +107,7 @@ public class JogoDAO {
     }
 
     public boolean delete(String titulo) {
-        String SQL = "DELETE FROM Jogo WHERE titulo_jogo = ?";
+        String SQL = "DELETE FROM crypta_nostalgica.Jogo WHERE titulo_jogo = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, titulo);
@@ -118,4 +118,5 @@ public class JogoDAO {
             return false;
         }
     }
-}
+
+}// fim da classe JogoDAO
