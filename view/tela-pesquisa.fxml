@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -14,18 +15,17 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="600.0" styleClass="pane_white" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="600.0" styleClass="pane_white" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PesquisaView">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="67.0" layoutX="1101.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="circle" width="183.0" />
-      <Label layoutX="992.0" layoutY="630.0" styleClass="subtitle" />
       <ToolBar layoutX="-162.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="false" prefHeight="40.0" prefWidth="1289.0" styleClass="barra">
         <items>
-            <Button alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="login" textAlignment="CENTER">
+            <Button fx:id="btnLogin" alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="login" textAlignment="CENTER">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-          <Button alignment="TOP_CENTER" mnemonicParsing="false" styleClass="bar_button" text="cadastro">
+          <Button fx:id="btnCadastrar" alignment="TOP_CENTER" mnemonicParsing="false" styleClass="bar_button" text="cadastro">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -33,12 +33,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="perfil" textAlignment="CENTER" visible="false">
+            <Button fx:id="btnPerfil" alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="perfil" textAlignment="CENTER" visible="false">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField alignment="CENTER_RIGHT" promptText="Explore a Crypta" styleClass="barra_pesquisa">
+            <TextField fx:id="searchField" alignment="CENTER_RIGHT" promptText="Explore a Crypta" styleClass="barra_pesquisa">
                <font>
                   <Font name="Candara" size="15.0" />
                </font>
@@ -56,12 +56,12 @@
       </ToolBar>
       <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="801.0" layoutY="17.0">
          <image>
-            <Image url="@images/simbolo-de-interface-de-lupa-de-pesquisa.png" />
+            <Image url="@../images/simbolo-de-interface-de-lupa-de-pesquisa.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="81.0" fitWidth="150.0" layoutX="172.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/logo_barra.png" />
+            <Image url="@../images/logo_barra.png" />
          </image>
       </ImageView>
       <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="246.0" layoutX="188.0" layoutY="118.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="200.0">
@@ -69,9 +69,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Rectangle>
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="188.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <ImageView fx:id="imgJogo_1" fitHeight="200.0" fitWidth="200.0" layoutX="188.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
-            <Image url="@images/imagem-padrao.png" />
+            <Image url="@../images/imagem-padrao.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -82,9 +82,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Rectangle>
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="188.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <ImageView fx:id="imgJogo_5" fitHeight="200.0" fitWidth="200.0" layoutX="188.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
-            <Image url="@images/imagem-padrao.png" />
+            <Image url="@../images/imagem-padrao.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -95,9 +95,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Rectangle>
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="423.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <ImageView fx:id="imgJogo_2" fitHeight="200.0" fitWidth="200.0" layoutX="423.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
-            <Image url="@images/imagem-padrao.png" />
+            <Image url="@../images/imagem-padrao.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -108,9 +108,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Rectangle>
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="423.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <ImageView fx:id="imgJogo_6" fitHeight="200.0" fitWidth="200.0" layoutX="423.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
-            <Image url="@images/imagem-padrao.png" />
+            <Image url="@../images/imagem-padrao.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -121,9 +121,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Rectangle>
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="657.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <ImageView fx:id="imgJogo_3" fitHeight="200.0" fitWidth="200.0" layoutX="657.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
-            <Image url="@images/imagem-padrao.png" />
+            <Image url="@../images/imagem-padrao.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -134,9 +134,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Rectangle>
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="657.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <ImageView fx:id="imgJogo_7" fitHeight="200.0" fitWidth="200.0" layoutX="657.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
-            <Image url="@images/imagem-padrao.png" />
+            <Image url="@../images/imagem-padrao.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -147,9 +147,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Rectangle>
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="892.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <ImageView fx:id="imgJogo_4" fitHeight="200.0" fitWidth="200.0" layoutX="892.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
-            <Image url="@images/imagem-padrao.png" />
+            <Image url="@../images/imagem-padrao.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -160,22 +160,22 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Rectangle>
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="892.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+      <ImageView fx:id="imgJogo_8" fitHeight="200.0" fitWidth="200.0" layoutX="892.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
-            <Image url="@images/imagem-padrao.png" />
+            <Image url="@../images/imagem-padrao.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <Label layoutX="188.0" layoutY="84.0" styleClass="subtitle" text="O panteão da Crypta Nostálgica" />
+      <Label fx:id="lblTermoPesquisado" layoutX="188.0" layoutY="84.0" styleClass="subtitle" text="O panteão da Crypta Nostálgica" />
       <Label layoutX="188.0" layoutY="395.0" styleClass="subtitle" text="Os recém chegados" />
       <Circle fill="DODGERBLUE" layoutX="213.0" layoutY="341.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label layoutX="202.0" layoutY="328.0" styleClass="score" text="00">
+      <Label fx:id="lblNotaCritica_1" layoutX="202.0" layoutY="328.0" styleClass="score" text="00">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -185,7 +185,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label layoutX="436.0" layoutY="327.0" styleClass="score" text="00">
+      <Label fx:id="lblNotaCritica_2" layoutX="436.0" layoutY="327.0" styleClass="score" text="00">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -195,7 +195,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label layoutX="670.0" layoutY="329.0" styleClass="score" text="00">
+      <Label fx:id="lblNotaCritica_3" layoutX="670.0" layoutY="329.0" styleClass="score" text="00">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -205,7 +205,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label layoutX="906.0" layoutY="327.0" styleClass="score" text="00">
+      <Label fx:id="lblNotaCritica_4" layoutX="906.0" layoutY="327.0" styleClass="score" text="00">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -215,7 +215,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label layoutX="201.0" layoutY="638.0" styleClass="score" text="00">
+      <Label fx:id="lblNotaCritica_5" layoutX="201.0" layoutY="638.0" styleClass="score" text="00">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -225,7 +225,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label layoutX="435.0" layoutY="637.0" styleClass="score" text="00">
+      <Label fx:id="lblNotaCritica_6" layoutX="435.0" layoutY="637.0" styleClass="score" text="00">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -235,7 +235,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label layoutX="669.0" layoutY="639.0" styleClass="score" text="00">
+      <Label fx:id="lblNotaCritica_7" layoutX="669.0" layoutY="639.0" styleClass="score" text="00">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -245,51 +245,56 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label layoutX="905.0" layoutY="637.0" styleClass="score" text="00">
+      <Label fx:id="lblNotaCritica_8" layoutX="905.0" layoutY="637.0" styleClass="score" text="00">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="239.0" layoutY="326.0" styleClass="game_title" text="Título">
+      <Label fx:id="lblJogo_1" layoutX="239.0" layoutY="326.0" styleClass="game_title" text="Título">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="239.0" layoutY="636.0" styleClass="game_title" text="Título">
+      <Label fx:id="lblJogo_5" layoutX="239.0" layoutY="636.0" styleClass="game_title" text="Título">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="473.0" layoutY="326.0" styleClass="game_title" text="Título">
+      <Label fx:id="lblJogo_2" layoutX="473.0" layoutY="326.0" styleClass="game_title" text="Título">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="473.0" layoutY="636.0" styleClass="game_title" text="Título">
+      <Label fx:id="lblJogo_6" layoutX="473.0" layoutY="636.0" styleClass="game_title" text="Título">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="708.0" layoutY="326.0" styleClass="game_title" text="Título">
+      <Label fx:id="lblJogo_3" layoutX="708.0" layoutY="326.0" styleClass="game_title" text="Título">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="708.0" layoutY="636.0" styleClass="game_title" text="Título">
+      <Label fx:id="lblJogo_7" layoutX="708.0" layoutY="636.0" styleClass="game_title" text="Título">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="942.0" layoutY="326.0" styleClass="game_title" text="Título">
+      <Label fx:id="lblJogo_4" layoutX="942.0" layoutY="326.0" styleClass="game_title" text="Título">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="942.0" layoutY="636.0" styleClass="game_title" text="Título">
+      <Label fx:id="lblJogo_8" layoutX="942.0" layoutY="636.0" styleClass="game_title" text="Título">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <ListView layoutX="342.0" layoutY="42.0" prefHeight="102.0" prefWidth="500.0" styleClass="list_view" visible="false" />
+      <ListView fx:id="searchResults" layoutX="342.0" layoutY="42.0" prefHeight="102.0" prefWidth="500.0" styleClass="list_view" visible="false" />
+      <Button fx:id="searchButton" layoutX="794.0" layoutY="12.0" mnemonicParsing="false" opacity="0.0" styleClass="mini_button" text="search" />
    </children>
+   <stylesheets>
+      <URL value="@style.css" />
+      <URL value="@../style.css" />
+   </stylesheets>
 </AnchorPane>

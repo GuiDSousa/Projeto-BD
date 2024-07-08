@@ -81,6 +81,14 @@
     -fx-font-weight: 400;
     -fx-line-height: normal;
 }
+.error_message {
+    -fx-text-fill: #bb0b0b;
+    -fx-font-family: Candara;
+    -fx-font-size: 13px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+}
 .image_box {
     -fx-pref-width: 200px;
     -fx-pref-height: 200px;
@@ -140,12 +148,15 @@
 .textField {
     -fx-pref-width: 250px;
     -fx-pref-height: 51px;
-    -fx-background-color: #eeeeee;
-    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 0);
+    -fx-background-color: #dadada;
+    -fx-border-color: #04092b;
 
 }
 .circle {
     -fx-fill: #04092b;
+}
+.circle_white {
+    -fx-fill: #97ae00;
 }
 .game_title {
     -fx-text-fill: #04092B;

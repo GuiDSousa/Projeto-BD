@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="600.0" styleClass="pane_blue" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LoginView">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="720.0" layoutX="886.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="394.0" />
+      <Label layoutX="964.0" layoutY="72.0" styleClass="title" stylesheets="@style.css" text="login" AnchorPane.bottomAnchor="577.0" AnchorPane.leftAnchor="964.0" AnchorPane.rightAnchor="205.0" AnchorPane.topAnchor="72.0" />
+      <Label layoutX="964.0" layoutY="234.0" styleClass="subtitle" text="Email" />
+      <TextField fx:id="txtLogin" layoutX="964.0" layoutY="264.0" promptText="example@email.com" styleClass="textField">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label accessibleRoleDescription="l@gl." layoutX="964.0" layoutY="335.0" styleClass="subtitle" text="Senha" />
+      <Button fx:id="btnEntrar" layoutX="964.0" layoutY="444.0" mnemonicParsing="false" text="Entrar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="965.0" layoutY="507.0" mnemonicParsing="false" styleClass="button2" text="Entrar com Google" textAlignment="RIGHT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="964.0" layoutY="578.0" styleClass="subtitle" text="Não possui registro?" />
+      <Label fx:id="lblCadastro" layoutX="1140.0" layoutY="578.0" styleClass="subtitle" text="Clique aqui." underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="987.0" layoutY="515.0">
+         <image>
+            <Image url="@../images/google.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="965.0" layoutY="158.0" styleClass="subtitle" text="Digite suas credenciais para &#10;adentrar na Crypta&#10;" />
+      <Label layoutX="177.0" layoutY="393.0" styleClass="subtitle_white" text="&quot;Juro solenemente que, ao adentrar na Crypta Nostálgica, &#10;honrarei a memória dos jogos clássicos, contribuirei com &#10;avaliações honestas e detalhadas, e respeitarei a &#10;comunidade de entusiastas. Comprometo-me a manter &#10;o espírito de nostalgia vivo e a compartilhar minhas&#10; experiências com integridade e paixão.&quot;&#10;&#10;" textAlignment="CENTER" />
+      <Label fx:id="lblErro" layoutX="965.0" layoutY="616.0" prefHeight="25.0" prefWidth="188.0" styleClass="error_message" text="Mensagem de erro" visible="false" />
+      <PasswordField fx:id="txtSenha" layoutX="965.0" layoutY="371.0" promptText="8 dígitos" styleClass="textField" />
+      <ImageView fitHeight="297.0" fitWidth="562.0" layoutX="143.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo_barra.png" />
+         </image>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@style.css" />
+      <URL value="@../style.css" />
+   </stylesheets>
+</AnchorPane>

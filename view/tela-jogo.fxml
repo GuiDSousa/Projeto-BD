@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -13,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="600.0" styleClass="pane_white" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="600.0" styleClass="pane_white" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.JogoView">
    <children>
       <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="205.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_red" width="1280.0">
          <cursor>
@@ -24,12 +25,12 @@
       <Label layoutX="992.0" layoutY="630.0" styleClass="subtitle" />
       <ToolBar layoutX="-162.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="false" prefHeight="40.0" prefWidth="1289.0" styleClass="barra">
         <items>
-            <Button alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="login" textAlignment="CENTER">
+            <Button fx:id="btnLogin" alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="login" textAlignment="CENTER">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-          <Button alignment="TOP_CENTER" mnemonicParsing="false" styleClass="bar_button" text="cadastro">
+          <Button fx:id="btnCadastrar" alignment="TOP_CENTER" mnemonicParsing="false" styleClass="bar_button" text="cadastro">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -37,7 +38,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="perfil" textAlignment="CENTER" visible="false">
+            <Button fx:id="btnPerfil" alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="perfil" textAlignment="CENTER" visible="false">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -52,49 +53,49 @@
       </ToolBar>
       <ImageView fitHeight="81.0" fitWidth="150.0" layoutX="172.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/logo_barra.png" />
+            <Image url="@../images/logo_barra.png" />
          </image>
       </ImageView>
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="265.0" layoutX="188.0" layoutY="339.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="311.0">
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="278.0" layoutX="188.0" layoutY="339.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="311.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Rectangle>
       <ImageView fitHeight="354.0" fitWidth="311.0" layoutX="188.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
-            <Image url="@images/imagem-padrao.png" />
+            <Image url="@../images/imagem-padrao.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <Circle fill="DODGERBLUE" layoutX="238.0" layoutY="544.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
+      <Circle fill="DODGERBLUE" layoutX="237.0" layoutY="528.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Circle>
-      <Label layoutX="216.0" layoutY="517.0" styleClass="score_game" text="00">
+      <Label fx:id="lblNotaCritica" layoutX="215.0" layoutY="501.0" styleClass="score_game" text="00">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Label>
-      <Label layoutX="186.0" layoutY="111.0" styleClass="title" text="Título">
+      <Label fx:id="lblTitulo" layoutX="186.0" layoutY="111.0" styleClass="title" text="Título">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Button layoutX="188.0" layoutY="630.0" mnemonicParsing="false" prefWidth="289.0" styleClass="button_review" text="ADICIONAR REVIEW">
+      <Button fx:id="btnAddReview" layoutX="188.0" layoutY="630.0" mnemonicParsing="false" prefWidth="289.0" styleClass="button_review" text="ADICIONAR REVIEW">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
       <Label layoutX="519.0" layoutY="241.0" styleClass="subtitle_bold" text="Data de lançamento:" />
-      <Label layoutX="519.0" layoutY="266.0" styleClass="subtitle" text="00/00/0000" />
+      <Label fx:id="lblDataLancamento" layoutX="519.0" layoutY="266.0" styleClass="subtitle" text="00/00/0000" />
       <Label layoutX="519.0" layoutY="308.0" styleClass="subtitle_bold" text="Gênero(s):" />
-      <Label layoutX="519.0" layoutY="339.0" styleClass="subtitle" text="RPG, Terror" underline="true" />
-      <Label layoutX="286.0" layoutY="532.0" styleClass="subtitle_bold" text="Comentário da Crítica" />
-      <Label layoutX="519.0" layoutY="410.0" styleClass="subtitle" text="Nintendo, PlayStation 2" underline="true" />
-      <TextArea editable="false" layoutX="519.0" layoutY="492.0" prefHeight="118.0" prefWidth="246.0" styleClass="text_area" text="Did you hear that? They've shut down the main reactor. We'll be destroyed for sure.We're doomed! There'll be no escape for the Princess this time." wrapText="true">
+      <Label fx:id="lblGenero" layoutX="519.0" layoutY="339.0" styleClass="subtitle" text="RPG, Terror" underline="true" />
+      <Label fx:id="lblComentarioCritica" layoutX="216.0" layoutY="576.0" styleClass="subtitle_bold" text="Comentário da Crítica" />
+      <Label fx:id="lblPlataforma" layoutX="519.0" layoutY="410.0" styleClass="subtitle" text="Nintendo, PlayStation 2" underline="true" />
+      <TextArea fx:id="txtSinopse" editable="false" layoutX="519.0" layoutY="492.0" prefHeight="118.0" prefWidth="246.0" styleClass="text_area" text="Did you hear that? They've shut down the main reactor. We'll be destroyed for sure.We're doomed! There'll be no escape for the Princess this time." wrapText="true">
          <font>
             <Font size="15.0" />
          </font>
@@ -106,7 +107,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Rectangle>
-      <TextArea editable="false" layoutX="918.0" layoutY="167.0" prefHeight="123.0" prefWidth="209.0" styleClass="comment_area" text="Um jogo absolutamente incrível, sem precedentes, nunca antes visto pela humanidade" wrapText="true">
+      <TextArea fx:id="txtComentarioUsuario_1" editable="false" layoutX="918.0" layoutY="167.0" prefHeight="123.0" prefWidth="209.0" styleClass="comment_area" text="Um jogo absolutamente incrível, sem precedentes, nunca antes visto pela humanidade" wrapText="true">
          <font>
             <Font size="15.0" />
          </font>
@@ -116,18 +117,18 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label layoutX="856.0" layoutY="203.0" styleClass="score_game" text="00">
+      <Label fx:id="lblNotaUsuario_1" layoutX="856.0" layoutY="203.0" styleClass="score_game" text="00">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="979.0" layoutY="268.0" styleClass="subtitle" text="NoobMaster69" textAlignment="RIGHT" />
+      <Label fx:id="lblNomeUsuario_1" layoutX="979.0" layoutY="268.0" styleClass="subtitle" text="NoobMaster69" textAlignment="RIGHT" />
       <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="840.0" layoutY="337.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="278.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Rectangle>
-      <TextArea editable="false" layoutX="918.0" layoutY="324.0" prefHeight="123.0" prefWidth="209.0" styleClass="comment_area" text="Absolute Cinema" wrapText="true">
+      <TextArea fx:id="txtComentarioUsuario_2" editable="false" layoutX="918.0" layoutY="324.0" prefHeight="123.0" prefWidth="209.0" styleClass="comment_area" text="Absolute Cinema" wrapText="true">
          <font>
             <Font size="15.0" />
          </font>
@@ -137,18 +138,18 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label layoutX="856.0" layoutY="360.0" styleClass="score_game" text="00">
+      <Label fx:id="lblNotaUsuario_2" layoutX="856.0" layoutY="360.0" styleClass="score_game" text="00">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="979.0" layoutY="425.0" styleClass="subtitle" text="AboveVlr" textAlignment="RIGHT" />
+      <Label fx:id="lblNomeUsuario_2" layoutX="979.0" layoutY="425.0" styleClass="subtitle" text="AboveVlr" textAlignment="RIGHT" />
       <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="120.0" layoutX="840.0" layoutY="491.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="278.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Rectangle>
-      <TextArea editable="false" layoutX="918.0" layoutY="478.0" prefHeight="123.0" prefWidth="209.0" styleClass="comment_area" text="Podre, você deveria ter vergonha de ter jogado isso um dia" wrapText="true">
+      <TextArea fx:id="txtComentarioUsuario_3" editable="false" layoutX="918.0" layoutY="478.0" prefHeight="123.0" prefWidth="209.0" styleClass="comment_area" text="Podre, você deveria ter vergonha de ter jogado isso um dia" wrapText="true">
          <font>
             <Font size="15.0" />
          </font>
@@ -158,11 +159,25 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label layoutX="856.0" layoutY="514.0" styleClass="score_game" text="00">
+      <Label fx:id="lblNotaUsuario_3" layoutX="856.0" layoutY="514.0" styleClass="score_game" text="00">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="979.0" layoutY="579.0" styleClass="subtitle" text="Mata Noob" textAlignment="RIGHT" />
+      <Label fx:id="lblNomeUsuario_3" layoutX="979.0" layoutY="579.0" styleClass="subtitle" text="Mata Noob" textAlignment="RIGHT" />
+      <Circle fill="DODGERBLUE" layoutX="309.0" layoutY="528.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="circle_white">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Circle>
+      <Label fx:id="lblMediaUsuario" layoutX="287.0" layoutY="501.0" styleClass="score_game" text="00">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Label>
    </children>
+   <stylesheets>
+      <URL value="@style.css" />
+      <URL value="@../style.css" />
+   </stylesheets>
 </AnchorPane>

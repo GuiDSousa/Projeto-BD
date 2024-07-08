@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="600.0" styleClass="pane_white" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AdminView">
+   <children>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="205.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_red" width="1280.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="67.0" layoutX="1101.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="circle" width="183.0" />
+      <Label fx:id="lblErro" layoutX="943.0" layoutY="648.0" styleClass="error_message" text="Mensagem de Erro no cadastro" visible="false" />
+      <ToolBar layoutX="-162.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="false" prefHeight="40.0" prefWidth="1289.0" styleClass="barra">
+        <items>
+            <Button alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="perfil" textAlignment="CENTER" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+        </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="24.0" />
+         </padding>
+      </ToolBar>
+      <ImageView fitHeight="81.0" fitWidth="150.0" layoutX="172.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo_barra.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="265.0" layoutX="188.0" layoutY="339.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_bar" width="311.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Rectangle>
+      <ImageView fx:id="imgJogo" fitHeight="354.0" fitWidth="311.0" layoutX="188.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
+         <image>
+            <Image url="@../images/imagem-padrao.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Circle fill="DODGERBLUE" layoutX="238.0" layoutY="544.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Circle>
+      <Label fx:id="lblNotaCritica" layoutX="216.0" layoutY="517.0" styleClass="score_game" text="00">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Label>
+      <Label fx:id="lblNomeJogo" layoutX="186.0" layoutY="111.0" styleClass="title" text="Título">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button fx:id="btnCadastrarJogo" layoutX="899.0" layoutY="579.0" mnemonicParsing="false" prefWidth="289.0" text="Adicionar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="519.0" layoutY="241.0" styleClass="subtitle_bold" text="Data de lançamento:" />
+      <Label fx:id="lblDataLancamento" layoutX="519.0" layoutY="266.0" styleClass="subtitle" text="00/00/0000" />
+      <Label layoutX="519.0" layoutY="308.0" styleClass="subtitle_bold" text="Gênero(s):" />
+      <Label fx:id="lblGenero" layoutX="519.0" layoutY="339.0" styleClass="subtitle" text="RPG, Terror" underline="true" />
+      <Label fx:id="lblComentarioCritica" layoutX="286.0" layoutY="532.0" styleClass="subtitle_bold" text="Comentário da Crítica" />
+      <Label fx:id="lblPlataforma" layoutX="519.0" layoutY="410.0" styleClass="subtitle" text="Nintendo, PlayStation 2" underline="true" />
+      <TextArea fx:id="lblSinopse" editable="false" layoutX="519.0" layoutY="492.0" prefHeight="118.0" prefWidth="246.0" styleClass="text_area" text="Did you hear that? They've shut down the main reactor. We'll be destroyed for sure.We're doomed! There'll be no escape for the Princess this time." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="519.0" layoutY="450.0" styleClass="subtitle_bold" text="Sinopse:" />
+      <Label layoutX="519.0" layoutY="376.0" styleClass="subtitle_bold" text="Plataforma(s):" />
+    <Button fx:id="btnSelecionarImagem" layoutX="862.0" layoutY="247.0" mnemonicParsing="false" styleClass="admin_button" text="Selecionar Imagem" />
+      <TextField fx:id="txtNomeJogo" layoutX="862.0" layoutY="306.0" promptText="Adicionar Título" styleClass="admin_text_field" />
+      <TextField fx:id="txtSinopse" layoutX="862.0" layoutY="369.0" promptText="Adicionar Sinopse" styleClass="admin_text_field" />
+      <TextField fx:id="txtDataLancamento" layoutX="1029.0" layoutY="245.0" promptText="Adicionar data dd/mm/aaaa" styleClass="admin_text_field" />
+      <TextField fx:id="txtNotaCritica" layoutX="1029.0" layoutY="306.0" promptText="Adicionar nota" styleClass="admin_text_field" />
+      <TextField fx:id="txtComentarioCritica" layoutX="1029.0" layoutY="371.0" promptText="Adicionar comentário" styleClass="admin_text_field" />
+      <MenuButton fx:id="menuPlataforma" layoutX="862.0" layoutY="440.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="320.0" styleClass="admin_menu_button" text="Plataforma">
+         <items>
+            <MenuItem fx:id="PlayStation_1" mnemonicParsing="false" text="PlayStation 1" />
+            <MenuItem fx:id="PlayStation_2" mnemonicParsing="false" text="PlayStation 2" />
+            <MenuItem fx:id="PC" mnemonicParsing="false" text="PC" />
+            <MenuItem fx:id="Nintendo_64" mnemonicParsing="false" text="Nintendo 64" />
+            <MenuItem fx:id="GameCube" mnemonicParsing="false" text="GameCube" />
+            <MenuItem fx:id="Xbox" mnemonicParsing="false" text="Xbox" />
+            <MenuItem fx:id="SuperNintendo" mnemonicParsing="false" text="Super Nintendo" />
+            <MenuItem fx:id="PolyStation" mnemonicParsing="false" text="PolyStation" />
+            <MenuItem fx:id="MasterSystem" mnemonicParsing="false" text="MasterSystem" />
+            <MenuItem fx:id="GameBoy" mnemonicParsing="false" text="GameBoy" />
+         </items>
+      </MenuButton>
+      <MenuButton fx:id="menuGenero" layoutX="1029.0" layoutY="440.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="320.0" styleClass="admin_menu_button" text="Gênero">
+         <items>
+            <MenuItem fx:id="Acao" mnemonicParsing="false" text="Ação" />
+            <MenuItem fx:id="Aventura" mnemonicParsing="false" text="Aventura" />
+            <MenuItem fx:id="Corrida" mnemonicParsing="false" text="Corrida" />
+            <MenuItem fx:id="Estrategia" mnemonicParsing="false" text="Estratégia" />
+            <MenuItem fx:id="Esporte" mnemonicParsing="false" text="Esporte" />
+            <MenuItem fx:id="Fantasia" mnemonicParsing="false" text="Fantasia" />
+            <MenuItem fx:id="RPG" mnemonicParsing="false" text="RPG" />
+            <MenuItem fx:id="Shooter" mnemonicParsing="false" text="Shooter" />
+            <MenuItem fx:id="Simulacao" mnemonicParsing="false" text="Simulacao" />
+            <MenuItem fx:id="Terror" mnemonicParsing="false" text="Terror" />
+            <MenuItem fx:id="Luta" mnemonicParsing="false" text="Luta" />
+         </items>
+      </MenuButton>
+      <Button fx:id="btnRevisarJogo" layoutX="899.0" layoutY="519.0" mnemonicParsing="false" prefWidth="289.0" styleClass="button2" text="Revisar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+   <stylesheets>
+      <URL value="@style.css" />
+      <URL value="@../style.css" />
+   </stylesheets>
+</AnchorPane>
