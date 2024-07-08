@@ -3,7 +3,6 @@ package dao;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
 import model.Avaliacao;
 
 public class AvaliacaoDAO {
@@ -15,12 +14,13 @@ public class AvaliacaoDAO {
     }
 
     public boolean insert(Avaliacao avaliacao) {
-        String SQL = "INSERT INTO Avaliacao(comentario, titulo_jogo, nota_usuario) VALUES(?, ?, ?)";
+        String SQL = "INSERT INTO Avaliacao(comentario, titulo_jogo, nota_usuario, id_usuario) VALUES(?, ?, ?, ?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, avaliacao.getComentario());
             pstmt.setString(2, avaliacao.getTituloDoJogo());
             pstmt.setDouble(3, avaliacao.getNotaDoUsuario());
+            pstmt.setDouble(4, avaliacao.getIdUsuario());
             pstmt.executeUpdate();
             return true;
         } catch (SQLException ex) {
@@ -40,6 +40,7 @@ public class AvaliacaoDAO {
             if (rs.next()) {
                 avaliacao = new Avaliacao(
                         rs.getInt("id_avaliacao"),
+                        rs.getInt("id_usuario"),
                         rs.getString("comentario"),
                         rs.getString("titulo_jogo"),
                         rs.getDouble("nota_usuario"));
@@ -58,6 +59,7 @@ public class AvaliacaoDAO {
             while (rs.next()) {
                 Avaliacao avaliacao = new Avaliacao(
                         rs.getInt("id_avaliacao"),
+                        rs.getInt("id_usuario"),
                         rs.getString("comentario"),
                         rs.getString("titulo_jogo"),
                         rs.getDouble("nota_usuario"));
@@ -70,13 +72,14 @@ public class AvaliacaoDAO {
     }
 
     public boolean update(Avaliacao avaliacao) {
-        String SQL = "UPDATE Avaliacao SET comentario = ?, titulo_jogo = ?, nota_usuario = ? WHERE id_avaliacao = ?";
+        String SQL = "UPDATE Avaliacao SET comentario = ?, titulo_jogo = ?, nota_usuario = ?, id_usuario = ? WHERE id_avaliacao = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, avaliacao.getComentario());
             pstmt.setString(2, avaliacao.getTituloDoJogo());
             pstmt.setDouble(3, avaliacao.getNotaDoUsuario());
-            pstmt.setInt(4, avaliacao.getId());
+            pstmt.setDouble(4, avaliacao.getIdUsuario());
+            pstmt.setInt(5, avaliacao.getId());
             pstmt.executeUpdate();
             return true;
         } catch (SQLException ex) {

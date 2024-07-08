@@ -7,13 +7,15 @@ package model;
 public class Avaliacao {
     // Atributos
     private int id;
+    private int idUsuario;
     private String comentario;
     private String tituloDoJogo;
     private double notaDoUsuario;
 
     // Construtor
-    public Avaliacao(int id, String comentario, String tituloDoJogo, double notaDoUsuario) {
+    public Avaliacao(int id, int idUsuario, String comentario, String tituloDoJogo, double notaDoUsuario) {
         this.id = id;
+        this.idUsuario = idUsuario;
         this.comentario = comentario;
         this.tituloDoJogo = tituloDoJogo;
         this.notaDoUsuario = notaDoUsuario;
@@ -25,6 +27,10 @@ public class Avaliacao {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public void setComentario(String comentario) {
@@ -42,6 +48,10 @@ public class Avaliacao {
     // Getters
     public int getId() {
         return id;
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
     public String getComentario() {
