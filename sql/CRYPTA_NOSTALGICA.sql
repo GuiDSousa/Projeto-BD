@@ -19,10 +19,12 @@ CREATE TABLE IF NOT EXISTS Jogo (
 
 CREATE TABLE IF NOT EXISTS Avaliacao (
     id_avaliacao SERIAL PRIMARY KEY,
-    comentario VARCHAR(600),
+    id_usuario INTEGER NOT NULL,
     titulo_jogo VARCHAR(100) NOT NULL,
+    comentario VARCHAR(600),
     nota_usuario DOUBLE PRECISION NOT NULL,
-    FOREIGN KEY (titulo_jogo) REFERENCES Jogo(titulo_jogo)
+    FOREIGN KEY (titulo_jogo) REFERENCES Jogo(titulo_jogo),
+    FOREIGN KEY (id_usuario) REFERENCES Usuario_Usu_logado_Usu_admin(id_usuario)
 );
 
 CREATE TABLE IF NOT EXISTS Escolha_jogo (
