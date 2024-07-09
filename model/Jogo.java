@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Date;
+import dao.*;
 
 /**
  * Classe utilizada para representar um jogo cadastrado no sistema e suas
@@ -9,7 +10,7 @@ import java.sql.Date;
 public class Jogo {
     // Atributos
     private String titulo;
-    private Date dataDeLancamento;
+    private String dataDeLancamento;
     private String produtora;
     private String sinopse;
     private byte[] imagemDeCapa;
@@ -19,7 +20,7 @@ public class Jogo {
     private double notaMediaDasAvaliacoes;
 
     // Construtor
-    public Jogo(String titulo, Date dataDeLancamento, String produtora, String sinopse, byte[] imagemDeCapa,
+    public Jogo(String titulo, String dataDeLancamento, String produtora, String sinopse, byte[] imagemDeCapa,
             double notaDaCritica, String comentarioDaCritica, Date dataDePublicacao, double notaMediaDasAvaliacoes) {
         this.titulo = titulo;
         this.dataDeLancamento = dataDeLancamento;
@@ -34,12 +35,21 @@ public class Jogo {
 
     // Metodos
 
+    /**
+     * Tenta inserir um novo jogo no BD e retorna um booleano indicando se a
+     * operacao foi bem sucedida ou nao.
+     */
+    public static boolean cadastrarNovoJogo(Jogo novoJogo) {
+        boolean cadastrou = new JogoDAO().insert(novoJogo);
+        return cadastrou;
+    }// fim do metodo cadastrarNovoJogo
+
     // Setters
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
-    public void setDataDeLancamento(Date dataDeLancamento) {
+    public void setDataDeLancamento(String dataDeLancamento) {
         this.dataDeLancamento = dataDeLancamento;
     }
 
@@ -76,7 +86,7 @@ public class Jogo {
         return titulo;
     }
 
-    public Date getDataDeLancamento() {
+    public String getDataDeLancamento() {
         return dataDeLancamento;
     }
 

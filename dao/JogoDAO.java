@@ -9,7 +9,7 @@ import model.Jogo;
 public class JogoDAO {
     private Connection connection;
 
-    private JogoDAO() {
+    public JogoDAO() {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         this.connection = connectionFactory.getConnection();
     }
@@ -19,7 +19,7 @@ public class JogoDAO {
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, jogo.getTitulo());
-            pstmt.setDate(2, jogo.getDataDeLancamento());
+            pstmt.setString(2, jogo.getDataDeLancamento());
             pstmt.setBytes(3, jogo.getImagemDeCapa());
             pstmt.setString(4, jogo.getSinopse());
             pstmt.setString(5, jogo.getProdutora());
@@ -46,7 +46,7 @@ public class JogoDAO {
             if (rs.next()) {
                 jogo = new Jogo(
                         rs.getString("titulo_jogo"),
-                        rs.getDate("data_lancamento"),
+                        rs.getString("data_lancamento"),
                         rs.getString("produtora"),
                         rs.getString("sinopse"),
                         rs.getBytes("imag_jogo"),
@@ -69,7 +69,7 @@ public class JogoDAO {
             while (rs.next()) {
                 Jogo jogo = new Jogo(
                         rs.getString("titulo_jogo"),
-                        rs.getDate("data_lancamento"),
+                        rs.getString("data_lancamento"),
                         rs.getString("produtora"),
                         rs.getString("sinopse"),
                         rs.getBytes("imag_jogo"),
@@ -89,7 +89,7 @@ public class JogoDAO {
         String SQL = "UPDATE crypta_nostalgica.Jogo SET data_lancamento = ?, imag_jogo = ?, sinopse = ?, produtora = ?, nota_critica = ?, data_publicacao = ?, nota_media_usuario = ?, comentatio_critico = ? WHERE titulo_jogo = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
-            pstmt.setDate(1, jogo.getDataDeLancamento());
+            pstmt.setString(1, jogo.getDataDeLancamento());
             pstmt.setBytes(2, jogo.getImagemDeCapa());
             pstmt.setString(3, jogo.getSinopse());
             pstmt.setString(4, jogo.getProdutora());

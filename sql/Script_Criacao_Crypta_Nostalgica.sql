@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS crypta_nostalgica.Usuario_Usu_logado_Usu_admin (
 
 CREATE TABLE IF NOT EXISTS crypta_nostalgica.Jogo (
     titulo_jogo VARCHAR(100) PRIMARY KEY,
-    data_lancamento DATE UNIQUE NOT NULL,
+    data_lancamento VARCHAR(64) NOT NULL,
     imag_jogo BYTEA NOT NULL,
     sinopse VARCHAR(600) NOT NULL,
     produtora VARCHAR(64) NOT NULL,
