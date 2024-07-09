@@ -55,15 +55,15 @@ public class PerfilView {
   @FXML TextArea txtAreaReview_3;
   /*
    * Elemento: lblNomeJogo_1 a lblNomeJogo_3
-   * Tipo: Button
+   * Tipo: Label
    * Visível: true
    * Objetivo: Mostra o nome do jogo respectivo ao review
    * Observações: Caso o usuário não tenha feito review, os campos devem estar vazios ou invisíveis
    *            Caso o usuário tenha feito review, os campos devem ser preenchidos com as últimas três reviews feitas pelo usuário
    */
-  @FXML Button lblNomeJogo_1;
-  @FXML Button lblNomeJogo_2;
-  @FXML Button lblNomeJogo_3;
+  @FXML Label lblNomeJogo_1;
+  @FXML Label lblNomeJogo_2;
+  @FXML Label lblNomeJogo_3;
   /*
    * Elemento: imgPerfil
    * Tipo: ImageView

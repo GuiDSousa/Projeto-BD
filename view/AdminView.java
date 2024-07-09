@@ -1,7 +1,11 @@
 package view;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckMenuItem;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
@@ -146,16 +150,16 @@ public class AdminView {
    * Objetivo: Receber a plataforma do jogo
    * Observações: Ao clicar em um dos botões, a plataforma é enviada para o controller
    */
-  @FXML MenuItem PlayStation_1;
-  @FXML MenuItem PlayStation_2;
-  @FXML MenuItem PC;
-  @FXML MenuItem Nintendo_64;
-  @FXML MenuItem GameCube;
-  @FXML MenuItem Xbox;
-  @FXML MenuItem SuperNintendo;
-  @FXML MenuItem PolyStation;
-  @FXML MenuItem MasterSystem;
-  @FXML MenuItem GameBoy;
+  @FXML CheckMenuItem PlayStation_1;
+  @FXML CheckMenuItem PlayStation_2;
+  @FXML CheckMenuItem PC;
+  @FXML CheckMenuItem Nintendo_64;
+  @FXML CheckMenuItem GameCube;
+  @FXML CheckMenuItem Xbox;
+  @FXML CheckMenuItem SuperNintendo;
+  @FXML CheckMenuItem PolyStation;
+  @FXML CheckMenuItem MasterSystem;
+  @FXML CheckMenuItem GameBoy;
   /*
    * Elemento: menuGenero
    * Tipo: MenuButton
@@ -171,17 +175,17 @@ public class AdminView {
    * Objetivo: Receber o gênero do jogo
    * Observações: Ao clicar em um dos botões, o gênero é enviado para o controller
    */
-  @FXML MenuItem Acao;
-  @FXML MenuItem Aventura;
-  @FXML MenuItem Corrida;
-  @FXML MenuItem Estrategia;
-  @FXML MenuItem Esporte;
-  @FXML MenuItem Fantasia;
-  @FXML MenuItem RPG;
-  @FXML MenuItem Shooter;
-  @FXML MenuItem Simulacao;
-  @FXML MenuItem Terror;
-  @FXML MenuItem Luta;
+  @FXML CheckMenuItem Acao;
+  @FXML CheckMenuItem Aventura;
+  @FXML CheckMenuItem Corrida;
+  @FXML CheckMenuItem Estrategia;
+  @FXML CheckMenuItem Esporte;
+  @FXML CheckMenuItem Fantasia;
+  @FXML CheckMenuItem RPG;
+  @FXML CheckMenuItem Shooter;
+  @FXML CheckMenuItem Simulacao;
+  @FXML CheckMenuItem Terror;
+  @FXML CheckMenuItem Luta;
 
   /*
    * Elemento: btnRevisarJogo
@@ -200,5 +204,56 @@ public class AdminView {
    */
   @FXML Button btnCadastrarJogo;
 
+  private List<Integer> plataformasSelecionadas = new ArrayList<>();
+  private List<Integer> generosSelecionados = new ArrayList<>();
 
+  public void initialize() {
+
+    // Configurar as ações dos itens de menu
+    configurarMenuItens();
+}
+
+private void configurarMenuItens() {
+  // Configurar itens do menu de plataforma
+  configurarItemMenu(PlayStation_1, 1, plataformasSelecionadas, menuPlataforma);
+  configurarItemMenu(PlayStation_2, 2, plataformasSelecionadas, menuPlataforma);
+  configurarItemMenu(PC, 3, plataformasSelecionadas, menuPlataforma);
+  configurarItemMenu(Nintendo_64, 4, plataformasSelecionadas, menuPlataforma);
+  configurarItemMenu(GameCube, 5, plataformasSelecionadas, menuPlataforma);
+  configurarItemMenu(Xbox, 6, plataformasSelecionadas, menuPlataforma);
+  configurarItemMenu(SuperNintendo, 7, plataformasSelecionadas, menuPlataforma);
+  configurarItemMenu(PolyStation, 8, plataformasSelecionadas, menuPlataforma);
+  configurarItemMenu(MasterSystem, 9, plataformasSelecionadas, menuPlataforma);
+  configurarItemMenu(GameBoy, 10, plataformasSelecionadas, menuPlataforma);
+
+  // Configurar itens do menu de gênero
+  configurarItemMenu(Acao, 1, generosSelecionados, menuGenero);
+  configurarItemMenu(Aventura, 2, generosSelecionados, menuGenero);
+  configurarItemMenu(Corrida, 3, generosSelecionados, menuGenero);
+  configurarItemMenu(Estrategia, 4, generosSelecionados, menuGenero);
+  configurarItemMenu(Esporte, 5, generosSelecionados, menuGenero);
+  configurarItemMenu(Fantasia, 6, generosSelecionados, menuGenero);
+  configurarItemMenu(RPG, 7, generosSelecionados, menuGenero);
+  configurarItemMenu(Shooter, 8, generosSelecionados, menuGenero);
+  configurarItemMenu(Simulacao, 9, generosSelecionados, menuGenero);
+  configurarItemMenu(Terror, 10, generosSelecionados, menuGenero);
+  configurarItemMenu(Luta, 11, generosSelecionados, menuGenero);
+}
+// Configurar ação de clique para os itens do menu
+private void configurarItemMenu(MenuItem menuItem, int index, List<Integer> listaSelecionados, MenuButton menuButton) {
+  menuItem.setOnAction(event -> {
+      if (listaSelecionados.contains(index)) {
+          listaSelecionados.remove(Integer.valueOf(index));
+      } else {
+          listaSelecionados.add(index);
+      }
+      menuButton.setText(menuItem.getText());
+      exibirSelecoes();
+  });
+}
+
+private void exibirSelecoes() {
+  System.out.println("Seleção atual de plataformas: " + plataformasSelecionadas);
+  System.out.println("Seleção atual de gêneros: " + generosSelecionados);
+}
 }

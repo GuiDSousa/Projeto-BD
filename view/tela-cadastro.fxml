@@ -22,7 +22,7 @@
          </cursor>
       </TextField>
       <Label layoutX="961.0" layoutY="458.0" styleClass="subtitle" text="Confirmar senha" />
-      <Button fx:id="btnCadastrar" layoutX="961.0" layoutY="560.0" mnemonicParsing="false" text="Cadastrar">
+      <Button fx:id="btnCadastrar" layoutX="961.0" layoutY="560.0" mnemonicParsing="false" onAction="#handleButtonCadastrar" onMouseExited="#offHover" onMouseMoved="#onHover" text="Cadastrar">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -58,21 +58,33 @@
             <Image url="@../images/mago.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnPerfilBardo" layoutX="966.0" layoutY="138.0" mnemonicParsing="false" opacity="0.0" styleClass="mini_button" text="bardo" />
-      <Button fx:id="btnPerfilElfo" layoutX="1033.0" layoutY="140.0" mnemonicParsing="false" opacity="0.0" styleClass="mini_button" text="elfo" />
-      <Button fx:id="btnPerfilGuerreiro" layoutX="1100.0" layoutY="140.0" mnemonicParsing="false" opacity="0.0" styleClass="mini_button" text="guerreiro" />
-      <Button fx:id="btnPerfilMago" layoutX="1165.0" layoutY="140.0" mnemonicParsing="false" opacity="0.0" styleClass="mini_button" text="mago" />
+      <Button fx:id="btnPerfilBardo" layoutX="966.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleButtonPerfilBardo" opacity="0.0" styleClass="mini_button" text="bardo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPerfilElfo" layoutX="1033.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleButtonPerfilBardo" opacity="0.0" styleClass="mini_button" text="elfo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPerfilGuerreiro" layoutX="1100.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleButtonPerfilGuerreiro" opacity="0.0" styleClass="mini_button" text="guerreiro">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnPerfilMago" layoutX="1165.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleButtonPerfilMago" opacity="0.0" styleClass="mini_button" text="mago">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <ImageView fitHeight="297.0" fitWidth="562.0" layoutX="143.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/logo_barra.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnVoltar" layoutX="961.0" layoutY="620.0" mnemonicParsing="false" styleClass="button2" text="Voltar">
+      <Button fx:id="btnVoltar" layoutX="961.0" layoutY="620.0" mnemonicParsing="false" onAction="#handleButtonVoltar" styleClass="button2" text="Voltar">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label fx:id="lblErro" layoutX="1038.0" layoutY="671.0" prefHeight="25.0" prefWidth="116.0" styleClass="error_message" text="Mensagem de erro" visible="false" />
+      <Label fx:id="lblErro" layoutX="961.0" layoutY="671.0" prefHeight="25.0" prefWidth="250.0" styleClass="error_message" text="Mensagem de erro" visible="false" />
    </children>
    <stylesheets>
       <URL value="@style.css" />

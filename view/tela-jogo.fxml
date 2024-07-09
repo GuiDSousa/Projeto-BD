@@ -24,26 +24,6 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="67.0" layoutX="1101.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="circle" width="183.0" />
       <Label layoutX="992.0" layoutY="630.0" styleClass="subtitle" />
       <ToolBar layoutX="-162.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="false" prefHeight="40.0" prefWidth="1289.0" styleClass="barra">
-        <items>
-            <Button fx:id="btnLogin" alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="login" textAlignment="CENTER">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-          <Button fx:id="btnCadastrar" alignment="TOP_CENTER" mnemonicParsing="false" styleClass="bar_button" text="cadastro">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btnPerfil" alignment="TOP_CENTER" contentDisplay="CENTER" depthTest="DISABLE" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" snapToPixel="false" styleClass="bar_button" text="perfil" textAlignment="CENTER" visible="false">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-        </items>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -84,7 +64,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Button fx:id="btnAddReview" layoutX="188.0" layoutY="630.0" mnemonicParsing="false" prefWidth="289.0" styleClass="button_review" text="ADICIONAR REVIEW">
+      <Button fx:id="btnAddReview" layoutX="188.0" layoutY="630.0" mnemonicParsing="false" onAction="#handleBtnAddReview" onMouseExited="#offHoverCadastro" onMouseMoved="#onHoverCadastro" prefWidth="289.0" styleClass="button_review" text="ADICIONAR REVIEW">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

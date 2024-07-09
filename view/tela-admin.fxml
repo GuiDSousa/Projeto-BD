@@ -4,9 +4,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
@@ -100,31 +100,31 @@
       <TextField fx:id="txtComentarioCritica" layoutX="1029.0" layoutY="371.0" promptText="Adicionar comentário" styleClass="admin_text_field" />
       <MenuButton fx:id="menuPlataforma" layoutX="862.0" layoutY="440.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="320.0" styleClass="admin_menu_button" text="Plataforma">
          <items>
-            <MenuItem fx:id="PlayStation_1" mnemonicParsing="false" text="PlayStation 1" />
-            <MenuItem fx:id="PlayStation_2" mnemonicParsing="false" text="PlayStation 2" />
-            <MenuItem fx:id="PC" mnemonicParsing="false" text="PC" />
-            <MenuItem fx:id="Nintendo_64" mnemonicParsing="false" text="Nintendo 64" />
-            <MenuItem fx:id="GameCube" mnemonicParsing="false" text="GameCube" />
-            <MenuItem fx:id="Xbox" mnemonicParsing="false" text="Xbox" />
-            <MenuItem fx:id="SuperNintendo" mnemonicParsing="false" text="Super Nintendo" />
-            <MenuItem fx:id="PolyStation" mnemonicParsing="false" text="PolyStation" />
-            <MenuItem fx:id="MasterSystem" mnemonicParsing="false" text="MasterSystem" />
-            <MenuItem fx:id="GameBoy" mnemonicParsing="false" text="GameBoy" />
+            <CheckMenuItem fx:id="PlayStation_1" mnemonicParsing="false" text="PlayStation 1" />
+            <CheckMenuItem fx:id="PlayStation_2" mnemonicParsing="false" text="PlayStation 2" />
+            <CheckMenuItem fx:id="PC" mnemonicParsing="false" text="PC" />
+            <CheckMenuItem fx:id="Nintendo_64" mnemonicParsing="false" text="Nitendo 64" />
+            <CheckMenuItem fx:id="GameCube" mnemonicParsing="false" text="GameCube" />
+            <CheckMenuItem fx:id="Xbox" mnemonicParsing="false" text="Xbox" />
+            <CheckMenuItem fx:id="SuperNintendo" mnemonicParsing="false" text="SuperNintendo" />
+            <CheckMenuItem fx:id="PolyStation" mnemonicParsing="false" text="PolyStation" />
+            <CheckMenuItem fx:id="MasterSystem" mnemonicParsing="false" text="MasterSystem" />
+            <CheckMenuItem fx:id="GameBoy" mnemonicParsing="false" text="GameBoy" />
          </items>
       </MenuButton>
       <MenuButton fx:id="menuGenero" layoutX="1029.0" layoutY="440.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="320.0" styleClass="admin_menu_button" text="Gênero">
          <items>
-            <MenuItem fx:id="Acao" mnemonicParsing="false" text="Ação" />
-            <MenuItem fx:id="Aventura" mnemonicParsing="false" text="Aventura" />
-            <MenuItem fx:id="Corrida" mnemonicParsing="false" text="Corrida" />
-            <MenuItem fx:id="Estrategia" mnemonicParsing="false" text="Estratégia" />
-            <MenuItem fx:id="Esporte" mnemonicParsing="false" text="Esporte" />
-            <MenuItem fx:id="Fantasia" mnemonicParsing="false" text="Fantasia" />
-            <MenuItem fx:id="RPG" mnemonicParsing="false" text="RPG" />
-            <MenuItem fx:id="Shooter" mnemonicParsing="false" text="Shooter" />
-            <MenuItem fx:id="Simulacao" mnemonicParsing="false" text="Simulacao" />
-            <MenuItem fx:id="Terror" mnemonicParsing="false" text="Terror" />
-            <MenuItem fx:id="Luta" mnemonicParsing="false" text="Luta" />
+            <CheckMenuItem fx:id="Acao" mnemonicParsing="false" text="Ação" />
+            <CheckMenuItem fx:id="Aventura" mnemonicParsing="false" text="Aventura" />
+            <CheckMenuItem fx:id="Corrida" mnemonicParsing="false" text="Corrida" />
+            <CheckMenuItem fx:id="Estrategia" mnemonicParsing="false" text="Estratégia" />
+            <CheckMenuItem fx:id="Esporte" mnemonicParsing="false" text="Esporte" />
+            <CheckMenuItem fx:id="Fantasia" mnemonicParsing="false" text="Fantasia" />
+            <CheckMenuItem fx:id="RPG" mnemonicParsing="false" text="RPG" />
+            <CheckMenuItem fx:id="Shooter" mnemonicParsing="false" text="Shooter" />
+            <CheckMenuItem fx:id="Simulacao" mnemonicParsing="false" text="Simulação" />
+            <CheckMenuItem fx:id="Terror" mnemonicParsing="false" text="Terror" />
+            <CheckMenuItem fx:id="Luta" mnemonicParsing="false" text="Luta" />
          </items>
       </MenuButton>
       <Button fx:id="btnRevisarJogo" layoutX="899.0" layoutY="519.0" mnemonicParsing="false" prefWidth="289.0" styleClass="button2" text="Revisar">

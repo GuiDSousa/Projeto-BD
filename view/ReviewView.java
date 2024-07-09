@@ -37,31 +37,7 @@ public class ReviewView {
   @FXML Button btnEstrela_4;
   @FXML Button btnEstrela_5;
   /*
-   * Elemento: menuPlataforma
-   * Tipo: MenuButton
-   * Visível: true
-   * Objetivo: Receber a plataforma do jogo
-   * Observações: Nenhuma
-   */
-  @FXML MenuButton menuPlataforma;
-  /*
-   * Elemento: PlayStation_1 a GameBoy
-   * Tipo: MenuItem
-   * Visível: true
-   * Objetivo: Receber a plataforma do jogo
-   * Observações: Ao clicar em um dos botões, a plataforma é enviada para o controller
-   */
-  @FXML MenuItem PlayStation_1;
-  @FXML MenuItem PlayStation_2;
-  @FXML MenuItem PC;
-  @FXML MenuItem Nintendo_64;
-  @FXML MenuItem GameCube;
-  @FXML MenuItem Xbox;
-  @FXML MenuItem SuperNintendo;
-  @FXML MenuItem PolyStation;
-  @FXML MenuItem MasterSystem;
-  @FXML MenuItem GameBoy;
-  /*
+
    * Elemento: btnEnviar
    * Tipo: Button
    * Visível: true
@@ -69,4 +45,18 @@ public class ReviewView {
    * Observações: Nenhuma
    */
   @FXML Button btnEnviar;
+
+
+  public void initialize() {
+    btnEstrela_1.setOnAction(event -> avaliar(1));
+    btnEstrela_2.setOnAction(event -> avaliar(2));
+    btnEstrela_3.setOnAction(event -> avaliar(3));
+    btnEstrela_4.setOnAction(event -> avaliar(4));
+    btnEstrela_5.setOnAction(event -> avaliar(5));
+  }
+
+  private void avaliar(int nota) {
+    System.out.println("Nota atribuída: " + nota);
+    // Adicionar código de processamento da nota e atribuir ao respectivo jogo
+  }
 }

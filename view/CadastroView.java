@@ -5,10 +5,15 @@ package view;
  
  */
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 public class CadastroView {
   /*
@@ -104,4 +109,99 @@ public class CadastroView {
    * Observações: Caso o método de cadastro retorne um erro, a label deve se tornar visível e exibir a mensagem de erro
    */
   @FXML Label lblErro;
+
+  @FXML private void handleButtonCadastrar() {
+    String username = txtUsername.getText();
+    String email = txtEmail.getText();
+    String senha = txtSenha.getText();
+    String confirmaSenha = txtConfirmaSenha.getText();
+    // Validação temporária dos campos até os métodos de validação serem implementados no controller
+    if (username.isEmpty() || email.isEmpty() || senha.isEmpty() || confirmaSenha.isEmpty()) {
+      lblErro.setText("Preencha todos os campos!");
+      lblErro.setVisible(true);
+      System.out.println("Preencha todos os campos!");
+    } else if (!senha.equals(confirmaSenha)) {
+      lblErro.setText("As senhas não coincidem!");
+      lblErro.setVisible(true);
+      System.out.println("As senhas não coincidem!");
+    } else {
+      // Chamar o método de cadastro do controller
+      System.out.println("Usuário cadastrado com sucesso!");
+      // Redirecionar para a tela de login
+      try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("tela-login.fxml"));
+
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage primaryStage = new Stage();
+        Image iconeJanela = new Image("images/esboço-logo-export.png");
+        primaryStage.getIcons().add(iconeJanela);
+        primaryStage.setTitle("Crypta Nostalgica");
+        primaryStage.setResizable(false);// bloqueia o redimensionamento da tela
+        primaryStage.centerOnScreen();
+
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        // fecha a tela de cadastro
+        Stage stage = (Stage) btnCadastrar.getScene().getWindow();
+        stage.close();
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+    }
+  }
+
+
+  @FXML private void handleButtonVoltar() {
+    try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("tela-pesquisa.fxml"));
+
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage primaryStage = new Stage();
+        Image iconeJanela = new Image("images/esboço-logo-export.png");
+        primaryStage.getIcons().add(iconeJanela);
+        primaryStage.setTitle("Crypta Nostalgica");
+        primaryStage.setResizable(false);// bloqueia o redimensionamento da tela
+        primaryStage.centerOnScreen();
+
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+        // fecha a tela de cadastro
+        Stage stage = (Stage) btnVoltar.getScene().getWindow();
+        stage.close();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+  }
+  @FXML
+  private void onHover() {
+    btnCadastrar.setStyle("-fx-background-color: #97ae00");
+  }
+  // Método para mudar a cor do botão enviar ao tirar o mouse
+  @FXML
+  private void offHover() {
+    btnCadastrar.setStyle("-fx-background-color: #04092b");
+  }
+
+  // Métodos para selecionar a classe/foto de perfil do usuário
+  @FXML private void handleButtonPerfilBardo() {
+    // Chamar o método de seleção de perfil do controller
+    System.out.println("Perfil de Bardo selecionado!");
+  }
+  @FXML private void handleButtonPerfilGuerreiro() {
+    // Chamar o método de seleção de perfil do controller
+    System.out.println("Perfil de Guerreiro selecionado!");
+  }
+  @FXML private void handleButtonPerfilMago() {
+    // Chamar o método de seleção de perfil do controller
+    System.out.println("Perfil de Mago selecionado!");
+  }
+  @FXML private void handleButtonPerfilElfo() {
+    // Chamar o método de seleção de perfil do controller
+    System.out.println("Perfil de Elfo selecionado!");
+  }
+
 }

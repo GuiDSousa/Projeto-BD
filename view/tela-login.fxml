@@ -22,7 +22,7 @@
          </cursor>
       </TextField>
       <Label accessibleRoleDescription="l@gl." layoutX="964.0" layoutY="335.0" styleClass="subtitle" text="Senha" />
-      <Button fx:id="btnEntrar" layoutX="964.0" layoutY="444.0" mnemonicParsing="false" text="Entrar">
+      <Button fx:id="btnEntrar" layoutX="964.0" layoutY="444.0" mnemonicParsing="false" onAction="#handleButtonEntrar" onMouseExited="#offHover" onMouseMoved="#onHover" text="Entrar">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -33,7 +33,7 @@
          </cursor>
       </Button>
       <Label layoutX="964.0" layoutY="578.0" styleClass="subtitle" text="Não possui registro?" />
-      <Label fx:id="lblCadastro" layoutX="1140.0" layoutY="578.0" styleClass="subtitle" text="Clique aqui." underline="true">
+      <Label fx:id="lblCadastro" layoutX="1140.0" layoutY="578.0" onMouseClicked="#handleButtonCadastrar" onMouseExited="#offHoverLabel" onMouseMoved="#onHoverLabel" styleClass="subtitle" text="Clique aqui." underline="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
