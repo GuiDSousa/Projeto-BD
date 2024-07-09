@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 
 import javax.imageio.ImageIO;
 
+import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -91,7 +92,7 @@ public class ManipularImagem {
      * 
      * @param imagem imagem a ser convertida.
      * 
-     * @return  byte[] bytes para a imagem.
+     * @return bytes correspondentas a imagem.
      * @throws Exception Erro ao converter a imagem
      */
     public static byte[] getImgBytes(BufferedImage imagem) {
@@ -100,24 +101,24 @@ public class ManipularImagem {
         try {
             ImageIO.write(imagem, "PNG", baos);
         } catch (IOException e) {
-           e.printStackTrace();
-        }
+            e.printStackTrace();
+        } // fim do bloco try-catch
         imagemEmBytes = baos.toByteArray();
-        
+
         return imagemEmBytes;
-    }//fim do metodo getImgBytes
+    }// fim do metodo getImgBytes
 
     /**
-     * Carrega uma imagem a partir de um array de bytes e exibe a imagem carregada
-     * ImageView.
+     * Carrega uma imagem a partir do seu array de bytes e exibe a imagem carregada
+     * em um ImageView.
      * 
-     * @param bytesDaImagem array de bytes para a imagem.
+     * @param bytesDaImagem array de bytes da imagem.
      * @param imageView     objeto onde a imagem carregada sera exibida.
      * 
      * @return Nao ha retorno.
      * @throws Exception Erro ao converter a imagem
      */
-    public static void exibiImagemNoImageView(byte[] bytesDaImagem, ImageView imageView) {
+    public static void exibirImagemNoImageView(byte[] bytesDaImagem, ImageView imageView) {
 
         // verifica se a imagem nao eh nula e converte para inputstream que é o formato
         // reconhecido pelo ImageIO
@@ -128,13 +129,13 @@ public class ManipularImagem {
 
                 Image imgCarregada = SwingFXUtils.toFXImage(bfImage, null);
 
-                imageView.setImage(imgCarregada);
+                Platform.runLater(() -> imageView.setImage(imgCarregada));// exibe a imagem carregada no imageView
             } catch (IOException e) {
                 e.printStackTrace();
             }
         } else {// se a imagem for nula, exibe uma mensagem indicando o erro
-            System.out.println("Erro! imagem nula!");
+            System.out.println("Erro! imagem não existe!");
         }
-    }// fim do metodo exibiImagemImageView
+    }// fim do metodo exibirImagemNoImageView
 
 }// fim da ManipularImagem
