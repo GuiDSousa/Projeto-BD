@@ -15,12 +15,12 @@ CREATE TABLE IF NOT EXISTS crypta_nostalgica.Usuario_Usu_logado_Usu_admin (
 
 CREATE TABLE IF NOT EXISTS crypta_nostalgica.Jogo (
     titulo_jogo VARCHAR(100) PRIMARY KEY,
-    data_lancamento DATE UNIQUE NOT NULL,
+    data_lancamento DATE NOT NULL,
     imag_jogo BYTEA NOT NULL,
     sinopse VARCHAR(600) NOT NULL,
     produtora VARCHAR(64) NOT NULL,
     nota_critica DOUBLE PRECISION NOT NULL,
-    data_publicacao DATE UNIQUE NOT NULL,
+    data_publicacao DATE NOT NULL,
     nota_media_usuario DOUBLE PRECISION NOT NULL,
     comentatio_critico varchar(600) NOT NULL
 );
@@ -32,7 +32,8 @@ CREATE TABLE IF NOT EXISTS crypta_nostalgica.Avaliacao (
     comentario VARCHAR(600),
     nota_usuario DOUBLE PRECISION NOT NULL,
     FOREIGN KEY (titulo_jogo) REFERENCES crypta_nostalgica.Jogo(titulo_jogo),
-    FOREIGN KEY (id_usuario) REFERENCES crypta_nostalgica.Usuario_Usu_logado_Usu_admin(id_usuario)
+    FOREIGN KEY (id_usuario) REFERENCES crypta_nostalgica.Usuario_Usu_logado_Usu_admin(id_usuario),
+    CONSTRAINT Avaliacao_unique UNIQUE (titulo_jogo, id_usuario)
 );
 
 CREATE TABLE IF NOT EXISTS crypta_nostalgica.Escolha_jogo (
@@ -45,7 +46,7 @@ CREATE TABLE IF NOT EXISTS crypta_nostalgica.Escolha_jogo (
 
 CREATE TABLE IF NOT EXISTS crypta_nostalgica.Genero (
     id_genero SERIAL PRIMARY KEY,
-    nome_genero VARCHAR(300) NOT NULL
+    nome_genero VARCHAR(300) NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS crypta_nostalgica.jogo_genero (
@@ -53,12 +54,13 @@ CREATE TABLE IF NOT EXISTS crypta_nostalgica.jogo_genero (
     titulo_jogo VARCHAR(100) NOT NULL,
     id_genero INTEGER NOT NULL,
     FOREIGN KEY (titulo_jogo) REFERENCES crypta_nostalgica.Jogo(titulo_jogo),
-    FOREIGN KEY (id_genero) REFERENCES crypta_nostalgica.Genero(id_genero)
+    FOREIGN KEY (id_genero) REFERENCES crypta_nostalgica.Genero(id_genero),
+    CONSTRAINT jogo_genero_unique UNIQUE (titulo_jogo, id_genero)
 );
 
 CREATE TABLE IF NOT EXISTS crypta_nostalgica.Plataforma (
     id_plataforma SERIAL PRIMARY KEY,
-    nome_plataforma VARCHAR(64) NOT NULL,
+    nome_plataforma VARCHAR(64) NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS crypta_nostalgica.Jogo_plataforma (
@@ -66,5 +68,6 @@ CREATE TABLE IF NOT EXISTS crypta_nostalgica.Jogo_plataforma (
     id_plataforma INTEGER NOT NULL,
     titulo_jogo VARCHAR(100) NOT NULL,
     FOREIGN KEY (id_plataforma) REFERENCES crypta_nostalgica.Plataforma(id_plataforma),
-    FOREIGN KEY (titulo_jogo) REFERENCES crypta_nostalgica.Jogo(titulo_jogo)
+    FOREIGN KEY (titulo_jogo) REFERENCES crypta_nostalgica.Jogo(titulo_jogo),
+    CONSTRAINT jogo_plataforma_unique UNIQUE (titulo_jogo, id_plataforma)
 );
