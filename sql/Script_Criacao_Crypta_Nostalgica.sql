@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS crypta_nostalgica.Usuario_Usu_logado_Usu_admin (
     id_usuario SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     imag_usuario BYTEA,
+    nome VARCHAR(64) NOT NULL,
     e_mail VARCHAR(250) NOT NULL UNIQUE
 );
 

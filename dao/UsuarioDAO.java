@@ -15,12 +15,13 @@ public class UsuarioDAO {
     }
 
     public boolean insert(Usuario usuario) {
-        String SQL = "INSERT INTO crypta_nostalgica.Usuario_Usu_logado_Usu_admin(nome, imag_usuario, e_mail) VALUES(?, ?, ?)";
+        String SQL = "INSERT INTO crypta_nostalgica.Usuario_Usu_logado_Usu_admin(nome, imag_usuario, e_mail, senha) VALUES(?, ?, ?, ?)";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, usuario.getNome());
             pstmt.setBytes(2, usuario.getImagemDePerfil());
             pstmt.setString(3, usuario.getEmail());
+            pstmt.setString(4, usuario.getSenha());
             pstmt.executeUpdate();
             return true;
         } catch (SQLException ex) {
@@ -39,7 +40,7 @@ public class UsuarioDAO {
 
             if (rs.next()) {
                 usuario = new Usuario(rs.getInt("id_usuario"), rs.getString("nome"), rs.getString("e_mail"),
-                        rs.getBytes("imag_usuario"));
+                        rs.getBytes("imag_usuario"), rs.getString("senha"));
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -54,7 +55,7 @@ public class UsuarioDAO {
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(SQL)) {
             while (rs.next()) {
                 Usuario usuario = new Usuario(rs.getInt("id_usuario"), rs.getString("nome"), rs.getString("e_mail"),
-                        rs.getBytes("imag_usuario"));
+                        rs.getBytes("imag_usuario"), rs.getString("senha"));
                 usuarios.add(usuario);
             }
         } catch (SQLException ex) {
@@ -64,13 +65,14 @@ public class UsuarioDAO {
     }
 
     public boolean update(Usuario usuario) {
-        String SQL = "UPDATE crypta_nostalgica.Usuario_Usu_logado_Usu_admin SET nome = ?, imag_usuario = ?, e_mail = ? WHERE id_usuario = ?";
+        String SQL = "UPDATE crypta_nostalgica.Usuario_Usu_logado_Usu_admin SET nome = ?, imag_usuario = ?, e_mail = ?, senha = ? WHERE id_usuario = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
             pstmt.setString(1, usuario.getNome());
             pstmt.setBytes(2, usuario.getImagemDePerfil());
             pstmt.setString(3, usuario.getEmail());
-            pstmt.setInt(4, usuario.getId());
+            pstmt.setString(4, usuario.getSenha());
+            pstmt.setInt(5, usuario.getId());
             pstmt.executeUpdate();
             return true;
         } catch (SQLException ex) {

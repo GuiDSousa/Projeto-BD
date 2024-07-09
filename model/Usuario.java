@@ -7,13 +7,15 @@ public class Usuario {
     private String nome;
     private String email;
     private byte[] imagemDePerfil;
+    private String senha;
 
     // Construtor
-    public Usuario(int id, String nome, String email, byte[] imagemDePerfil) {
+    public Usuario(int id, String nome, String email, byte[] imagemDePerfil, String senha) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.imagemDePerfil = imagemDePerfil;
+        this.senha = senha;
     }// fim do construtor
 
     // Metodos
@@ -35,6 +37,10 @@ public class Usuario {
         this.imagemDePerfil = imagemDePerfil;
     }
 
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     // Getters
     public int getId() {
         return id;
@@ -51,5 +57,10 @@ public class Usuario {
     public byte[] getImagemDePerfil() {
         return imagemDePerfil;
     }
+        
+    public String getSenha() {
+        return senha;
+    }
+
 
 }// fim da classe Usuario
