@@ -13,14 +13,14 @@ public class EnviarImagem {
     /**
      * Metodo listener para um botao de selecao de imagem. Ao clicar no botao, abre
      * a janela com a selecao do arquivos.
+     * COPIE E COLE ONDE PRECISA FAZER A SELECAO DE IMAGEM
      */
-    public static void acaoBtnselecionarImagem(ActionEvent event) {
+    public void acaoBtnselecionarImagem(ActionEvent event) {
 
         FileChooser menuEscolherArquivo = new FileChooser();
 
         File arquivoSelecionado = menuEscolherArquivo.showOpenDialog(null);
 
-        BufferedImage imagemAtual;
 
         if (arquivoSelecionado != null) {
             try {
