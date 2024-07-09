@@ -138,4 +138,34 @@ public class ManipularImagem {
         }
     }// fim do metodo exibirImagemNoImageView
 
+
+
+    /**
+     * Reconstroi uma imagem a partir do seu array de bytes. Se o array de bytes for nulo nao faz nada.
+     * 
+     * @param bytesDaImagem array de bytes da imagem.
+     * 
+     * @return imagem reconstruida.
+     * @throws Exception Erro ao converter a imagem
+     */
+    public static Image reconstruirImagem(byte[] bytesDaImagem) {
+        Image imagemReconstruida = null;
+        // verifica se o array nao eh nulo e converte para inputstream que é o formato
+        // reconhecido pelo ImageIO
+        if (bytesDaImagem != null) {
+            InputStream input = new ByteArrayInputStream(bytesDaImagem);
+            try {
+                BufferedImage bfImage = ImageIO.read(input);
+
+                imagemReconstruida = SwingFXUtils.toFXImage(bfImage, null);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {// se a imagem for nula, exibe uma mensagem indicando o erro
+            System.out.println("Erro! imagem não existe!");
+    
+        }
+        return imagemReconstruida;
+    }// fim do metodo reconstruirImagem
 }// fim da ManipularImagem
