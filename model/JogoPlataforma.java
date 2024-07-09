@@ -1,5 +1,7 @@
 package model;
 
+import dao.JogoPlataformaDAO;
+
 public class JogoPlataforma {
     // Atributos
     private int id;
@@ -14,6 +16,21 @@ public class JogoPlataforma {
     }// fim do construtor
 
     // Metodos
+    /**
+     * Cria uma relacao entre um jogo e uma plataforma e tenta inserir essa relação
+     * no BD. Retorna um booleano indicando o sucesso ou nao da operacao.
+     */
+    public static boolean criarRelacaoJogoPlataforma(String tituloDoJogo, int idDaPlataforma) {
+        boolean relacionou = false;
+
+        // cria uma nova relacao entre o jogo e a plataforma: o id eh definido pelo BD
+        JogoPlataforma novaRelacaoJogoPlataforma = new JogoPlataforma(0, idDaPlataforma, tituloDoJogo);
+
+        // tenta inserir a nova relacao no BD
+        relacionou = new JogoPlataformaDAO().insert(novaRelacaoJogoPlataforma);
+
+        return relacionou;// retorna o resultado da operacao
+    }// fim do metodo relacionar criarRelacaoJogoPlataforma
 
     // Setters
     public void setId(int id) {

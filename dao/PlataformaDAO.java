@@ -9,7 +9,7 @@ import model.Plataforma;
 public class PlataformaDAO {
     private Connection connection;
 
-    private PlataformaDAO() {
+    public PlataformaDAO() {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         this.connection = connectionFactory.getConnection();
     }

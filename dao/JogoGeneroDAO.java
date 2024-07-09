@@ -8,7 +8,7 @@ import java.util.List;
 public class JogoGeneroDAO {
     private Connection connection;
 
-    private JogoGeneroDAO() {
+    public JogoGeneroDAO() {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         this.connection = connectionFactory.getConnection();
     }

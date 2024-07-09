@@ -82,6 +82,10 @@ public class Jogo {
     }
 
     // Getters
+    public String getNotaCriticaString(){
+        String notaDaCritica = String.valueOf((int) this.notaDaCritica);
+        return notaDaCritica;
+    }
     public String getTitulo() {
         return titulo;
     }

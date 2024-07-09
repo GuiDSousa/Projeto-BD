@@ -8,7 +8,7 @@ import model.Avaliacao;
 public class AvaliacaoDAO {
     Connection connection;
 
-    private AvaliacaoDAO() {
+    public AvaliacaoDAO() {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         this.connection = connectionFactory.getConnection();
     }
