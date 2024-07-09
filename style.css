@@ -1,69 +1,278 @@
 /* Converted CSS for JavaFX */
 .button {
     -fx-text-fill: #fff;
-    -fx-font-family: Inter;
+    -fx-font-family: Candara;
     -fx-font-size: 20px;
     -fx-font-style: normal;
     -fx-font-weight: 400;
     -fx-line-height: normal;
     -fx-background-color: #04092b;
-    -fx-pref-width: 362px;
+    -fx-pref-width: 250px;
     -fx-pref-height: 51px;
 }
 .button2 {
     -fx-text-fill: #868686;
-    -fx-font-family: Inter;
+    -fx-font-family: Candara;
     -fx-font-size: 20px;
     -fx-font-style: normal;
     -fx-font-weight: 400;
     -fx-line-height: normal;
     -fx-background-color: #fff;
-    -fx-pref-width: 362px;
+    -fx-pref-width: 250px;
     -fx-pref-height: 51px;
     -fx-border-color: #ccc;
 }
+.bar_button {
+    -fx-text-fill: #04092B;
+    -fx-font-family: Candara;
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+    -fx-background-color: #fff;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 26px;
+}
 
-.pane {
+.pane_blue {
     -fx-pref-width: 1280px;
     -fx-pref-height: 720px;
     -fx-background-color: #04092b;
+}
+.pane_white {
+    -fx-pref-width: 1280px;
+    -fx-pref-height: 720px;
+    -fx-background-color: #fff;
 }
 .rectangle{
     -fx-pref-width: 530px;
     -fx-pref-height: 720px;
     -fx-fill: #fff;
 }
+.rectangle_bar{
+    -fx-pref-width: 750px;
+    -fx-pref-height: 720px;
+    -fx-fill: #8989ff;
+    -fx-border-color: #04092b;
+}
+.barra {
+    -fx-pref-width: 1280px;
+    -fx-pref-height: 60px;
+    -fx-background-color: #04092b;
+}
+.barra_pesquisa {
+    -fx-pref-width: 500px;
+    -fx-pref-height: 30px;
+    -fx-background-color: #8989ff;
+}
 .title {
     -fx-text-fill: #04092B;
-    -fx-font-family: Inter;
+    -fx-font-family: Candara;
     -fx-font-size: 49px;
     -fx-font-style: normal;
-    -fx-font-weight: 400;
+    -fx-font-weight: bold;
     -fx-line-height: normal;
 }
 .subtitle {
     -fx-text-fill: #04092B;
-    -fx-font-family: Inter;
+    -fx-font-family: Candara;
     -fx-font-size: 20px;
     -fx-font-style: normal;
     -fx-font-weight: 400;
     -fx-line-height: normal;
+}
+.error_message {
+    -fx-text-fill: #bb0b0b;
+    -fx-font-family: Candara;
+    -fx-font-size: 13px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+}
+.image_box {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 200px;
+    -fx-background-color: #d9d9d9
 }
 .subtitle_white {
     -fx-text-fill: #fff;
-    -fx-font-family: Inter;
+    -fx-font-family: Candara;
     -fx-font-size: 20px;
     -fx-font-style: normal;
     -fx-font-weight: 400;
     -fx-line-height: normal;
 }
+.score {
+    -fx-text-fill: #fff;
+    -fx-font-family: Candara;
+    -fx-font-size: 20px;
+    -fx-font-style: normal;
+    -fx-font-weight: bold;
+    -fx-line-height: normal;
+}
+.score_game {
+    -fx-text-fill: #fff;
+    -fx-font-family: Candara;
+    -fx-font-size: 40px;
+    -fx-font-style: normal;
+    -fx-font-weight: bold;
+    -fx-line-height: normal;
+}
 
-.textField {
-    -fx-pref-width: 362px;
+.rectangle_red {
+    -fx-pref-width: 530px;
+    -fx-pref-height: 720px;
+    -fx-fill: #97ae00;
+}
+
+.button_review {
+    -fx-text-fill: #fff;
+    -fx-font-family: Candara;
+    -fx-font-size: 20px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+    -fx-background-color: #04092b;
+    -fx-pref-width: 311px;
     -fx-pref-height: 51px;
-    -fx-background-color: #d9d9d9;
+}
+
+.subtitle_bold {
+    -fx-text-fill: #04092B;
+    -fx-font-family: Candara;
+    -fx-font-size: 20px;
+    -fx-font-style: normal;
+    -fx-font-weight: bold;
+    -fx-line-height: normal;
+}
+.textField {
+    -fx-pref-width: 250px;
+    -fx-pref-height: 51px;
+    -fx-background-color: #dadada;
+    -fx-border-color: #04092b;
+
+}
+.circle {
+    -fx-fill: #04092b;
+}
+.circle_white {
+    -fx-fill: #97ae00;
+}
+.game_title {
+    -fx-text-fill: #04092B;
+    -fx-font-family: Candara;
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+}
+
+.text_area {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 100px;
+    -fx-text-fill: #04092B;
+    -fx-font-family: Candara;
+    -fx-fonnt-size: 14px;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+.comment_area {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 100px;
+    -fx-text-fill: #04092B;
+    -fx-font-family: Candara;
+    -fx-fonnt-size: 15px;
+    -fx-background-color: #04092B;
+    -fx-border-color:transparent;
+}
+
+/* Exclusivos da tela de Review */
+
+.review_pane {
+    -fx-pref-width: 700px;
+    -fx-pref-height: 500px;
+    -fx-background-color: #fff;
+}
+.text_field_review {
+    -fx-pref-width: 555px;
+    -fx-pref-height: 100px;
+    -fx-font-family: Candara;
+    -fx-font-size: 15px;
+    -fx-prompt-text-fill: #ababac;
+    -fx-background-color: #fff;
+    -fx-border-color: #04092b;
     -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 0);
+}
+.menu_button {
+    -fx-text-fill: #04092B;
+    -fx-font-family: Candara;
+    -fx-font-size: 15px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+    -fx-background-color: #fff;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 40px;
+    -fx-border-color: #ccc;
+}
+.mini_button {
+    -fx-pref-height: 3px;
+    -fx-pref-width: 3px;
+}
+
+/* Exclusivos da tela de Usuário */
+
+.profile_name {
+    -fx-text-fill: #04092B;
+    -fx-font-family: Candara;
+    -fx-font-size: 30px;
+    -fx-font-style: normal;
+    -fx-font-weight: bold;
+    -fx-line-height: normal;
+}
+
+.list_view {
+    -fx-pref-width: 500px;
+    -fx-pref-height: 100px;
+    -fx-background-color: #fff;
+    -fx-border-color: #d4d4d4;
+}
+
+/* Exclusivos da tela de Administração */
+.admin_pane {
+    -fx-pref-width: 500px;
+    -fx-pref-height: 720px;
+    -fx-background-color: #fff;
+}
+.admin_text_field {
+    -fx-pref-width: 150px;
+    -fx-pref-height: 50px;
+    -fx-background-color: #eeeeee;
+    -fx-border-color: #04092b;
 
 }
 
+.admin_button {
+    -fx-text-fill: #fff;
+    -fx-font-family: Candara;
+    -fx-font-size: 13px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+    -fx-background-color: #04092b;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 50px;
+}
 
+.admin_menu_button {
+    -fx-text-fill: #04092B;
+    -fx-font-family: Candara;
+    -fx-font-size: 13px;
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-line-height: normal;
+    -fx-background-color: #fff;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 50px;
+    -fx-border-color: #ccc;
+}

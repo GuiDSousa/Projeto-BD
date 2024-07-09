@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="600.0" styleClass="review_pane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ReviewView">
+   <children>
+      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="154.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="rectangle_red" width="700.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Rectangle>
+      <ImageView fitHeight="141.0" fitWidth="264.0" layoutX="45.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo_barra.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="342.0" layoutY="51.0" styleClass="title" text="Game Review" textAlignment="RIGHT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button fx:id="btnEnviar" layoutX="385.0" layoutY="376.0" mnemonicParsing="false" prefWidth="289.0" text="ENVIAR REVIEW">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtComentario" alignment="TOP_LEFT" layoutX="73.0" layoutY="192.0" prefHeight="142.0" prefWidth="555.0" promptText="Conte a sua experiência (opcional)" styleClass="text_field_review" />
+      <ImageView fitHeight="239.0" fitWidth="264.0" layoutX="389.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/estrelas.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnEstrela_1" layoutX="395.0" layoutY="315.0" mnemonicParsing="false" opacity="0.0" prefHeight="20.0" prefWidth="6.0" styleClass="mini_button" text="1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnEstrela_2" layoutX="442.0" layoutY="315.0" mnemonicParsing="false" opacity="0.0" prefHeight="20.0" prefWidth="6.0" styleClass="mini_button" text="2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnEstrela_3" layoutX="492.0" layoutY="315.0" mnemonicParsing="false" opacity="0.0" prefHeight="20.0" prefWidth="6.0" styleClass="mini_button" text="3">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnEstrela_4" layoutX="540.0" layoutY="315.0" mnemonicParsing="false" opacity="0.0" prefHeight="20.0" prefWidth="6.0" styleClass="mini_button" text="4">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnEstrela_5" layoutX="589.0" layoutY="315.0" mnemonicParsing="false" opacity="0.0" prefHeight="20.0" prefWidth="6.0" styleClass="mini_button" text="5">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="lblNomeJogo" layoutX="498.0" layoutY="110.0" styleClass="subtitle" text="Nome do Jogo" textAlignment="RIGHT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+   <stylesheets>
+      <URL value="@style.css" />
+      <URL value="@../style.css" />
+   </stylesheets>
+</AnchorPane>
