@@ -1,35 +1,35 @@
 /* Execute o script a seguir para povoar corretamente o Banco de Dados para a aplicacao.*/
 
 /* Insercao de plataformas em ordem alfabetica */
-INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma, jogabilidade)
-VALUES('GameBoy', '');
+INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma)
+VALUES('GameBoy');
 
-INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma, jogabilidade)
-VALUES('GameCube', '');
+INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma)
+VALUES('GameCube');
 
-INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma, jogabilidade)
-VALUES('MasterSystem', '');
+INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma)
+VALUES('MasterSystem');
 
-INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma, jogabilidade)
-VALUES('Nintendo 64', '');
+INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma)
+VALUES('Nintendo 64');
 
-INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma, jogabilidade)
-VALUES('PC', '');
+INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma)
+VALUES('PC');
 
-INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma, jogabilidade)
-VALUES('PlayStation 1', '');
+INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma)
+VALUES('PlayStation 1');
 
-INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma, jogabilidade)
-VALUES('PlayStation 2', '');
+INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma)
+VALUES('PlayStation 2');
 
-INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma, jogabilidade)
-VALUES('PolyStation', '');
+INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma)
+VALUES('PolyStation');
 
-INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma, jogabilidade)
-VALUES('Super Nintendo', '');
+INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma)
+VALUES('Super Nintendo');
 
-INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma, jogabilidade)
-VALUES('Xbox', '');
+INSERT INTO crypta_nostalgica.Plataforma(nome_plataforma)
+VALUES('Xbox');
 
 /* Insercao de generos em ordem alfabetica */
 INSERT INTO crypta_nostalgica.Genero(nome_genero)
