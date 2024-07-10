@@ -1,7 +1,7 @@
 package controller;
 
-import model.JogoGenero;
 import model.JogoPlataforma;
+import util.RecuperarId;
 
 public class ControleJogoPlataforma {
 
@@ -23,6 +23,7 @@ public class ControleJogoPlataforma {
             for (int i = 0; i < listaDeIdsPlataformas.length; i++) {
                 // cria tenta inserir a relacao criada no bd
                 JogoPlataforma.criarRelacaoJogoPlataforma(tituloDoJogo, listaDeIdsPlataformas[i]);
+                System.out.println("Criando a relacao: " + tituloDoJogo +" -> " +RecuperarId.getPlataformaString(listaDeIdsPlataformas[i]));
             } // fim do for
         } // fim do if
     }// fim do metodo criarRelacoesJogoPlataforma

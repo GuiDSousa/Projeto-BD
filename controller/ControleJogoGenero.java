@@ -1,6 +1,7 @@
 package controller;
 
 import model.JogoGenero;
+import util.RecuperarId;
 
 public class ControleJogoGenero {
     /**
@@ -20,6 +21,7 @@ public class ControleJogoGenero {
             for (int i = 0; i < listaDeIdsGeneros.length; i++) {
                 // cria tenta inserir a relacao criada no bd
                 JogoGenero.criarRelacaoJogoGenero(tituloDoJogo, listaDeIdsGeneros[i]);
+                System.out.println("Criou a relacao: " + tituloDoJogo+ " -> " + RecuperarId.getGeneroString(listaDeIdsGeneros[i]));
             } // fim do for
         } // fim do if
     }// fim do metodo relacionarJogoGeneros

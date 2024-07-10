@@ -56,8 +56,117 @@ public class RecuperarId {
         return id;
     }// fim do metodo getIdGenero
 
+    public static String getGeneroString(int id) {
+        String genero = null;
+
+        switch (id) {
+            case 1: {
+                genero = "Ação";
+                break;
+            }
+            case 2: {
+                genero = "Aventura";
+                break;
+            }
+            case 3: {
+                genero = "Corrida";
+                break;
+            }
+
+            case 4: {
+                genero = "Estratégia";
+                break;
+            }
+            case 5: {
+                genero = "Esporte";
+                break;
+            }
+            case 6: {
+                genero = "Fantasia";
+                break;
+            }
+            case 7: {
+                genero = "RPG";
+                break;
+            }
+
+            case 8: {
+                genero = "Shooter";
+                break;
+            }
+            case 9: {
+                genero = "Simulação";
+                break;
+            }
+
+            case 10: {
+                genero = "Terror";
+                break;
+            }
+            case 11: {
+                genero = "Luta";
+                break;
+            }
+
+        }// switch
+        return genero;
+    }
+
+    public static String getPlataformaString(int id) {
+        String plataforma = null;
+
+        switch (id) {
+            case 1: {
+                plataforma = "GameBoy";
+                break;
+            }
+            case 2: {
+                plataforma = "GameCube";
+                break;
+            }
+            case 3: {
+                plataforma = "MasterSystem";
+                break;
+            }
+
+            case 4: {
+                plataforma = "Nintendo 64";
+                break;
+            }
+            case 5: {
+                plataforma = "PC";
+                break;
+            }
+            case 6: {
+                plataforma = "PlayStation 1";
+                break;
+            }
+            case 7: {
+                plataforma = "PlayStation 2";
+                break;
+            }
+
+            case 8: {
+                plataforma = "PolyStation";
+                break;
+            }
+            case 9: {
+                plataforma = "Super Nintendo";
+                break;
+            }
+
+            case 10: {
+                plataforma = "Xbox";
+                break;
+            }
+
+        }// switch
+        return plataforma;
+    }
+
     /**
-     * Retorna o id corresponde a uma Plataforma de acordo com o seu nome. Retorna -1
+     * Retorna o id corresponde a uma Plataforma de acordo com o seu nome. Retorna
+     * -1
      * se a plataforma nao existir.
      */
     public static int getIdPlataforma(String nomePlataforma) {

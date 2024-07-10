@@ -48,6 +48,15 @@ public class ControleJogo {
         return jogoBuscado;
     }
 
+
+    public boolean isCadastrado(String titulo) {
+        Jogo jogoBuscado = new JogoDAO().selectByTitulo(titulo);
+        if(jogoBuscado != null){
+            return true;
+        }
+return false;
+    }
+
     public Image recuperarImagemDoJogo(String tituloDoJogo) {
         Image imagemDoJogo = null;
 
