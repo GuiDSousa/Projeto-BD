@@ -31,6 +31,9 @@ public class EnviarImagem {
                 // ADICIONAR ABAIXO O IMAGE VIEW PARA EXIBIR A IMAGEM SELECIONADA
                 ManipularImagem.exibirImagemNoImageView(bytesDaImagem, null);
 
+                // Printar o byte da imagem
+                System.out.println("Imagem em bytes: " + bytesDaImagem);
+
             } catch (Exception e) {
                 e.printStackTrace();
             }

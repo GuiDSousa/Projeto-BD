@@ -74,7 +74,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Button fx:id="btnCadastrarJogo" layoutX="899.0" layoutY="579.0" mnemonicParsing="false" prefWidth="289.0" text="Adicionar">
+      <Button fx:id="btnCadastrarJogo" layoutX="899.0" layoutY="579.0" mnemonicParsing="false" onAction="#handleCadastrarJogoPredefinido" prefWidth="289.0" text="Adicionar">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

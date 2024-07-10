@@ -1,5 +1,6 @@
 // Hello World Program
 
+import controller.ControleJogo;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +18,9 @@ public class Principal extends Application {
 
         Parent root = loader.load();
         Scene scene = new Scene(root);
+
+        // Cria um controller para o jogo pré-definido
+
 
         Image iconeJanela = new Image("images/esboço-logo-export.png");
         primaryStage.getIcons().add(iconeJanela);

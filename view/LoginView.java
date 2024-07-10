@@ -124,6 +124,9 @@ public class LoginView {
           pesquisaView.btnPerfil.setVisible(true);
           setUsuarioLogado(usuarioLogado = true);
           System.out.println("Usuário logado com sucesso");
+      } else if (email.isEmpty() || password.isEmpty()) {
+          lblErro.setVisible(true);
+          lblErro.setText("Preencha todos os campos");
       } else {
           lblErro.setVisible(true);
           lblErro.setText("Usuário ou senha inválidos");

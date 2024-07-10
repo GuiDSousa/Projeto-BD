@@ -43,7 +43,7 @@
       </Rectangle>
       <ImageView fitHeight="354.0" fitWidth="311.0" layoutX="188.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" styleClass="image_box">
          <image>
-            <Image url="@../images/imagem-padrao.png" />
+            <Image url="@../images/Capas/resident-evil.png" />
          </image>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -72,7 +72,7 @@
       <Label layoutX="519.0" layoutY="241.0" styleClass="subtitle_bold" text="Data de lançamento:" />
       <Label fx:id="lblDataLancamento" layoutX="519.0" layoutY="266.0" styleClass="subtitle" text="00/00/0000" />
       <Label layoutX="519.0" layoutY="308.0" styleClass="subtitle_bold" text="Gênero(s):" />
-      <Label fx:id="lblGenero" layoutX="519.0" layoutY="339.0" styleClass="subtitle" text="RPG, Terror" underline="true" />
+      <Label fx:id="lblGenero" layoutX="519.0" layoutY="339.0" styleClass="subtitle" text="Aventura, Terror" underline="true" />
       <Label fx:id="lblComentarioCritica" layoutX="216.0" layoutY="576.0" styleClass="subtitle_bold" text="Comentário da Crítica" />
       <Label fx:id="lblPlataforma" layoutX="519.0" layoutY="410.0" styleClass="subtitle" text="Nintendo, PlayStation 2" underline="true" />
       <TextArea fx:id="txtSinopse" editable="false" layoutX="519.0" layoutY="492.0" prefHeight="118.0" prefWidth="246.0" styleClass="text_area" text="Did you hear that? They've shut down the main reactor. We'll be destroyed for sure.We're doomed! There'll be no escape for the Princess this time." wrapText="true">
@@ -97,7 +97,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label fx:id="lblNotaUsuario_1" layoutX="856.0" layoutY="203.0" styleClass="score_game" text="00">
+      <Label fx:id="lblNotaUsuario_1" layoutX="856.0" layoutY="203.0" styleClass="score_game" text="5">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -118,7 +118,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label fx:id="lblNotaUsuario_2" layoutX="856.0" layoutY="360.0" styleClass="score_game" text="00">
+      <Label fx:id="lblNotaUsuario_2" layoutX="856.0" layoutY="360.0" styleClass="score_game" text="4">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -139,7 +139,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Circle>
-      <Label fx:id="lblNotaUsuario_3" layoutX="856.0" layoutY="514.0" styleClass="score_game" text="00">
+      <Label fx:id="lblNotaUsuario_3" layoutX="856.0" layoutY="514.0" styleClass="score_game" text="1">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -150,12 +150,12 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Circle>
-      <Label fx:id="lblMediaUsuario" layoutX="287.0" layoutY="501.0" styleClass="score_game" text="00">
+      <Label fx:id="lblMediaUsuario" layoutX="287.0" layoutY="501.0" styleClass="score_game" text="4">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Label>
-      <Label layoutX="519.0" layoutY="664.0" styleClass="error_message" text="Mensagem de erro" />
+      <Label layoutX="519.0" layoutY="664.0" styleClass="error_message" text="Mensagem de erro" visible="false" />
    </children>
    <stylesheets>
       <URL value="@style.css" />

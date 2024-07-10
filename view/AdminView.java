@@ -213,6 +213,8 @@ public class AdminView {
     configurarMenuItens();
 }
 
+
+
 private void configurarMenuItens() {
   // Configurar itens do menu de plataforma
   configurarItemMenu(PlayStation_1, 1, plataformasSelecionadas, menuPlataforma);
