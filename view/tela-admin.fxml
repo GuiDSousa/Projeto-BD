@@ -56,7 +56,7 @@
             <Image url="@../images/imagem-padrao.png" />
          </image>
          <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="DEFAULT" />
          </cursor>
       </ImageView>
       <Circle fill="DODGERBLUE" layoutX="238.0" layoutY="544.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle">
