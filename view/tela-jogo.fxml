@@ -155,6 +155,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Label>
+      <Label layoutX="519.0" layoutY="664.0" styleClass="error_message" text="Mensagem de erro" />
    </children>
    <stylesheets>
       <URL value="@style.css" />
