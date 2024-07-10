@@ -31,7 +31,7 @@ LEFT JOIN
 GROUP BY 
     j.titulo_jogo;
 
---SELECT * FROM AvaliacoesMediaNotaPorJogo;
+--SELECT * FROM crypta_nostalgica.AvaliacoesMediaNotaPorJogo;
 
 --Quantidade de jogos por plataforma e por genero
 CREATE VIEW crypta_nostalgica.QuantidadeJogosPorPlataformaEGenero AS
