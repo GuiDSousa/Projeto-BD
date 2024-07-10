@@ -16,6 +16,7 @@ public class Usuario {
         this.email = email;
         this.imagemDePerfil = imagemDePerfil;
         this.senha = senha;
+    
     }// fim do construtor
 
     // Metodos
