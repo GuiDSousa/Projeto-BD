@@ -1,6 +1,5 @@
 package model;
 
-import java.sql.Date;
 /** Classe generica utilizada para representar um usuario do sistema. */
 public class Usuario {
     // Atributos
@@ -9,7 +8,6 @@ public class Usuario {
     private String email;
     private byte[] imagemDePerfil;
     private String senha;
-    private Date dataRegistro;
 
     // Construtor
     public Usuario(int id, String nome, String email, byte[] imagemDePerfil, String senha) {
@@ -44,10 +42,6 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public void setDataRegistro(Date dataRegistro) {
-        this.dataRegistro = dataRegistro;
-    }
-
     // Getters
     public int getId() {
         return id;
@@ -67,10 +61,6 @@ public class Usuario {
         
     public String getSenha() {
         return senha;
-    }
-
-    public Date getDataRegistro() {
-        return dataRegistro;
     }
 
 

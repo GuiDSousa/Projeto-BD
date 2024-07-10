@@ -1,7 +1,5 @@
 package controller;
 
-import java.sql.SQLException;
-import java.time.LocalDateTime;
 
 import dao.UsuarioDAO;
 import model.Usuario;
@@ -12,36 +10,28 @@ public class ControleUsuario {
     return usuarioValidado;
 }
 
-public boolean cadastrarNovoUsuario(String nome, String email, String senha, byte[] imagemDePerfil) {
+public boolean cadastrarNovoUsuario(int id, String nome, String email, byte[] imagemDePerfil, String senha) {
     // Verificação dos parâmetros
     if ((nome != null && nome.length() > 0)
             && (email != null && email.length() > 0)
             && (senha != null && senha.length() > 0)
             && (imagemDePerfil != null && imagemDePerfil.length > 0)) {
 
-        try {
-            // Instancia a data de registro como a data atual
-            LocalDateTime dataRegistro = LocalDateTime.now();
-            java.sql.Date dataRegistroSQL = java.sql.Date.valueOf(dataRegistro.toLocalDate());
+        // Cria um novo objeto de usuário com os dados fornecidos
+        Usuario novoUsuario = new Usuario(id, nome, email, imagemDePerfil, senha);
 
-            // Cria um novo objeto de usuário com os dados fornecidos
-            Usuario novoUsuario = new Usuario(nome, email, senha, imagemDePerfil, dataRegistroSQL);
+        // Tenta inserir o novo usuário no BD
+        UsuarioDAO usuarioDAO = new UsuarioDAO(); // Supondo que UsuarioDAO tenha um método insert como mostrado
 
-            // Tenta inserir o novo usuário no BD
-            UsuarioDAO usuarioDAO = new UsuarioDAO(); // Supondo que UsuarioDAO tenha um método insert como mostrado
-
-            if (usuarioDAO.insert(novoUsuario)) {
-                return true; // Retorna verdadeiro se o usuário for criado corretamente
-            } else {
-                return false; // Retorna falso se não inserir o usuário no BD
-            }
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-            return false; // Retorna falso em caso de exceção SQL
+        if (usuarioDAO.insert(novoUsuario)) {
+            return true; // Retorna verdadeiro se o usuário for criado corretamente
+        } else {
+            return false; // Retorna falso se não inserir o usuário no BD
         }
     }
     return false; // Retorna falso se os parâmetros não estiverem válidos
 }
+
 
 
 
