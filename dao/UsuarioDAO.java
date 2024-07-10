@@ -49,24 +49,30 @@ public class UsuarioDAO {
     }
 
 
-    public Usuario validateCredentials(String email, String senha) { // pode retornar nulo
-        String SQL = "SELECT * FROM crypta_nostalgica.Usuario_Usu_logado_Usu_admin WHERE e_mail and senha= ?";
-        Usuario usuario = null;
+public Usuario validateCredentials(String email, String senha) { 
+    String SQL = "SELECT * FROM crypta_nostalgica.Usuario_Usu_logado_Usu_admin WHERE e_mail = ? AND senha = ?";
+    Usuario usuario = null;
 
-        try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
-            pstmt.setString(1, email);
-            pstmt.setString(2, senha);
-            ResultSet rs = pstmt.executeQuery();
+    try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
+        pstmt.setString(1, email);
+        pstmt.setString(2, senha);
+        ResultSet rs = pstmt.executeQuery();
 
-            if (rs.next()) {
-                usuario = new Usuario(rs.getInt("id_usuario"), rs.getString("nome"), rs.getString("e_mail"),
-                        rs.getBytes("imag_usuario"), rs.getString("senha"));
-            }
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
+        if (rs.next()) {
+            usuario = new Usuario(
+                rs.getInt("id_usuario"), 
+                rs.getString("nome"), 
+                rs.getString("e_mail"),
+                rs.getBytes("imag_usuario"), 
+                rs.getString("senha")
+            );
         }
-        return usuario;
+    } catch (SQLException ex) {
+        System.out.println(ex.getMessage());
     }
+    return usuario;
+}
+
 
     public List<Usuario> selectAll() {
         String SQL = "SELECT * FROM crypta_nostalgica.Usuario_Usu_logado_Usu_admin";

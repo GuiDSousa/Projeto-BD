@@ -34,6 +34,7 @@ public class JogoDAO {
             return false;
         }
     }
+    
 
     public Jogo selectByTitulo(String titulo) {
         String SQL = "SELECT * FROM crypta_nostalgica.Jogo WHERE titulo_jogo = ?";
@@ -117,6 +118,34 @@ public class JogoDAO {
             System.out.println(ex.getMessage());
             return false;
         }
+    }
+
+    // Busca por titulo parcial
+    public List<Jogo> selectByTituloParcial(String titulo) {
+        String SQL = "SELECT * FROM crypta_nostalgica.Jogo WHERE titulo_jogo LIKE ?";
+        List<Jogo> jogos = new ArrayList<>();
+
+        try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
+            pstmt.setString(1, "%" + titulo + "%");
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                Jogo jogo = new Jogo(
+                        rs.getString("titulo_jogo"),
+                        rs.getString("data_lancamento"),
+                        rs.getString("produtora"),
+                        rs.getString("sinopse"),
+                        rs.getBytes("imag_jogo"),
+                        rs.getDouble("nota_critica"),
+                        rs.getString("comentatio_critico"),
+                        rs.getDate("data_publicacao"),
+                        rs.getDouble("nota_media_usuario"));
+                jogos.add(jogo);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return jogos;
     }
 
 }// fim da classe JogoDAO

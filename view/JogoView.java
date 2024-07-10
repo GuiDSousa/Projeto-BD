@@ -1,5 +1,6 @@
 package view;
 
+import controller.ControleJogo;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,7 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import model.Jogo;
 
 public class JogoView {
   /*
@@ -136,9 +139,24 @@ public class JogoView {
   @FXML
   Label lblErro;
 
+  @FXML ImageView imgJogo;
+
+  ControleJogo controleJogo = new ControleJogo();
+
   public void initialize() {
+    
   }
 
+      public void setJogoData(Jogo jogo) {
+        String notaFormatada = String.format("%.0f", jogo.getNotaDaCritica());
+        lblComentarioCritica.setText(jogo.getComentarioDaCritica());
+        lblNotaCritica.setText(notaFormatada);
+        lblDataLancamento.setText(jogo.getDataDeLancamento());
+        lblTitulo.setText(jogo.getTitulo());
+        txtSinopse.setText(jogo.getSinopse());
+        
+
+    }
 
   @FXML
   private void handleBtnAddReview() {

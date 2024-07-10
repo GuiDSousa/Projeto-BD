@@ -1,4 +1,5 @@
 package view;
+import controller.ControleUsuario;
 /*
  * Made by: @GuiDSousa
  * Last modification: 07/07/2024
@@ -13,9 +14,18 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class CadastroView {
+  /*
+   * Elemento: imgPerfil
+   * Tipo: ImageView
+   * Visível: true
+   * Objetivo: Exibir a foto de perfil selecionada pelo usuário
+   * Observações: Deve ser inicializada com a foto de perfil padrão, que é a do Bardo
+   */
+  @FXML ImageView imgPerfil;
   /*
    * Elemento: btnPerfilBardo
    * Tipo: Button
@@ -110,47 +120,60 @@ public class CadastroView {
    */
   @FXML Label lblErro;
 
-  @FXML private void handleButtonCadastrar() {
-    String username = txtUsername.getText();
-    String email = txtEmail.getText();
-    String senha = txtSenha.getText();
-    String confirmaSenha = txtConfirmaSenha.getText();
-    // Validação temporária dos campos até os métodos de validação serem implementados no controller
-    if (username.isEmpty() || email.isEmpty() || senha.isEmpty() || confirmaSenha.isEmpty()) {
-      lblErro.setText("Preencha todos os campos!");
-      lblErro.setVisible(true);
-      System.out.println("Preencha todos os campos!");
-    } else if (!senha.equals(confirmaSenha)) {
-      lblErro.setText("As senhas não coincidem!");
-      lblErro.setVisible(true);
-      System.out.println("As senhas não coincidem!");
-    } else {
-      // Chamar o método de cadastro do controller
-      System.out.println("Usuário cadastrado com sucesso!");
-      // Redirecionar para a tela de login
-      try {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("tela-login.fxml"));
-
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-        Stage primaryStage = new Stage();
-        Image iconeJanela = new Image("images/esboço-logo-export.png");
-        primaryStage.getIcons().add(iconeJanela);
-        primaryStage.setTitle("Crypta Nostalgica");
-        primaryStage.setResizable(false);// bloqueia o redimensionamento da tela
-        primaryStage.centerOnScreen();
-
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
-        // fecha a tela de cadastro
-        Stage stage = (Stage) btnCadastrar.getScene().getWindow();
-        stage.close();
-      } catch (Exception e) {
-        e.printStackTrace();
+  @FXML
+  private void handleButtonCadastrar() {
+      String username = txtUsername.getText();
+      String email = txtEmail.getText();
+      String senha = txtSenha.getText();
+      String confirmaSenha = txtConfirmaSenha.getText();
+      byte[] imagemDePerfil = null;
+  
+      // Validação temporária dos campos até os métodos de validação serem implementados no controller
+      if (username.isEmpty() || email.isEmpty() || senha.isEmpty() || confirmaSenha.isEmpty()) {
+          lblErro.setText("Preencha todos os campos!");
+          lblErro.setVisible(true);
+          System.out.println("Preencha todos os campos!");
+      } else if (!senha.equals(confirmaSenha)) {
+          lblErro.setText("As senhas não coincidem!");
+          lblErro.setVisible(true);
+          System.out.println("As senhas não coincidem!");
+      } else {
+          try {
+              ControleUsuario controleUsuario = new ControleUsuario();
+              boolean sucesso = controleUsuario.cadastrarNovoUsuario(0, username, email, imagemDePerfil, senha);
+  
+              if (sucesso) {
+                  System.out.println("Usuário cadastrado com sucesso!");
+  
+                  FXMLLoader loader = new FXMLLoader(getClass().getResource("tela-login.fxml"));
+                  Parent root = loader.load();
+                  Scene scene = new Scene(root);
+                  Stage primaryStage = new Stage();
+                  Image iconeJanela = new Image("images/esboço-logo-export.png");
+                  primaryStage.getIcons().add(iconeJanela);
+                  primaryStage.setTitle("Crypta Nostalgica");
+                  primaryStage.setResizable(false); // bloqueia o redimensionamento da tela
+                  primaryStage.centerOnScreen();
+  
+                  primaryStage.setScene(scene);
+                  primaryStage.show();
+  
+                  // Fecha a tela de cadastro
+                  Stage stage = (Stage) btnCadastrar.getScene().getWindow();
+                  stage.close();
+              } else {
+                  lblErro.setText("Erro ao cadastrar usuário!");
+                  lblErro.setVisible(true);
+                  System.out.println("Erro ao cadastrar usuário!");
+              }
+          } catch (Exception e) {
+              e.printStackTrace();
+              lblErro.setText("Erro interno! Tente novamente.");
+              lblErro.setVisible(true);
+          }
       }
-    }
   }
+  
 
 
   @FXML private void handleButtonVoltar() {

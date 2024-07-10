@@ -1,6 +1,8 @@
 package view;
 import java.io.IOException;
+import java.util.ResourceBundle.Control;
 
+import controller.ControleUsuario;
 /*
  * Made by: @GuiDSousa
  * Last modification: 07/07/2024
@@ -97,39 +99,43 @@ public class LoginView {
 
   @FXML 
   private void handleButtonEntrar() {
-    String username = txtLogin.getText();
+    String email = txtLogin.getText();
     String password = txtSenha.getText();
+    ControleUsuario controleUsuario = new ControleUsuario();
     try {
-      if (username.equals("admin") && password.equals("admin")) { // Trocar depois para o método de autenticação no controller
-        FXMLLoader adminLoader = new FXMLLoader(getClass().getResource("tela-pesquisa.fxml"));
-        Parent adminRoot = adminLoader.load();
-        Scene adminScene = new Scene(adminRoot);
-        Stage adminStage = new Stage();
-        
-        Image iconeJanela = new Image("images/esboço-logo-export.png");
-        adminStage.getIcons().add(iconeJanela);
-        adminStage.setTitle("Crypta Nostalgica");
-        adminStage.setResizable(false);// bloqueia o redimensionamento da tela
-        adminStage.centerOnScreen();
-        adminStage.setScene(adminScene);
-        adminStage.show();
-        // fecha a tela de pesquisa
-        btnEntrar.getScene().getWindow().hide();
-        PesquisaView pesquisaView = adminLoader.getController();
-        pesquisaView.btnCadastrar.setVisible(false);
-        pesquisaView.btnLogin.setVisible(false);
-        pesquisaView.btnPerfil.setVisible(true);
-        setUsuarioLogado(usuarioLogado = true);
-        System.out.println("Usuário logado com sucesso");
-  
+      if (controleUsuario.realizarLogin(email, password)) {
+          FXMLLoader adminLoader = new FXMLLoader(getClass().getResource("tela-pesquisa.fxml"));
+          Parent adminRoot = adminLoader.load();
+          Scene adminScene = new Scene(adminRoot);
+          Stage adminStage = new Stage();
+
+          Image iconeJanela = new Image("images/esboço-logo-export.png");
+          adminStage.getIcons().add(iconeJanela);
+          adminStage.setTitle("Crypta Nostalgica");
+          adminStage.setResizable(false);
+          adminStage.centerOnScreen();
+          adminStage.setScene(adminScene);
+          adminStage.show();
+
+          btnEntrar.getScene().getWindow().hide();
+          PesquisaView pesquisaView = adminLoader.getController();
+          pesquisaView.btnCadastrar.setVisible(false);
+          pesquisaView.btnLogin.setVisible(false);
+          pesquisaView.btnPerfil.setVisible(true);
+          setUsuarioLogado(usuarioLogado = true);
+          System.out.println("Usuário logado com sucesso");
+      } else if (email.isEmpty() || password.isEmpty()) {
+          lblErro.setVisible(true);
+          lblErro.setText("Preencha todos os campos");
       } else {
-        lblErro.setVisible(true);
-        lblErro.setText("Usuário ou senha inválidos");
+          lblErro.setVisible(true);
+          lblErro.setText("Usuário ou senha inválidos");
       }
-    } catch (IOException e) {
+  } catch (IOException e) {
       e.printStackTrace();
-    }
-    }
+  }
+}
+    
     // Get usuário logado
     public boolean getUsuarioLogado() {
       return usuarioLogado;

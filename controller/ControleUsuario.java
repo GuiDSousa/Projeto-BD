@@ -14,8 +14,7 @@ public boolean cadastrarNovoUsuario(int id, String nome, String email, byte[] im
     // Verificação dos parâmetros
     if ((nome != null && nome.length() > 0)
             && (email != null && email.length() > 0)
-            && (senha != null && senha.length() > 0)
-            && (imagemDePerfil != null && imagemDePerfil.length > 0)) {
+            && (senha != null && senha.length() > 0)) {
 
         // Cria um novo objeto de usuário com os dados fornecidos
         Usuario novoUsuario = new Usuario(id, nome, email, imagemDePerfil, senha);
@@ -30,10 +29,15 @@ public boolean cadastrarNovoUsuario(int id, String nome, String email, byte[] im
         }
     }
     return false; // Retorna falso se os parâmetros não estiverem válidos
+
 }
+public boolean realizarLogin(String email, String senha) {
+    Usuario usuario = new UsuarioDAO().validateCredentials(email, senha);
+    if (usuario != null) {
+        return true;
+    } else {
+        return false;
+    }
 
-
-
-
-
+}
 }
