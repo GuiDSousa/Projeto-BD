@@ -16,7 +16,7 @@ public class Principal extends Application {
     public void start(Stage janelaPrincipal) throws Exception {
         // instancia o fxmlLoader e define a localizacao do arquivo .fxml que contem os
         // elementos graficos que serao associados a janela
-        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("tela-login.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/tela-login.fxml"));
 
         Parent root = loader.load();// carrega a estrutura grafica da janela
         Scene cena = new Scene(root);// cria a cena e define a estrutura grafica que sera exibida por ela
