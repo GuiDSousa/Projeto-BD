@@ -37,7 +37,7 @@ public class ConsultasAvancadasDAO {
                     rs.getString("sinopse"),                    
                     rs.getBytes("imag_jogo"),                    
                     rs.getDouble("nota_critica"),
-                    rs.getString("comentario_critico"),
+                    rs.getString("comentatio_critico"),
                     rs.getDate("data_publicacao"),
                     rs.getDouble("nota_media_usuario")
                 );
@@ -74,7 +74,7 @@ public class ConsultasAvancadasDAO {
                         rs.getString("sinopse"),                    
                         rs.getBytes("imag_jogo"),                    
                         rs.getDouble("nota_critica"),
-                        rs.getString("comentario_critico"),
+                        rs.getString("comentatio_critico"),
                         rs.getDate("data_publicacao"),
                         rs.getDouble("nota_media_usuario")
                 );

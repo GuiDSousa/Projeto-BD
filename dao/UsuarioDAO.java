@@ -50,7 +50,7 @@ public class UsuarioDAO {
 
 
     public Usuario validateCredentials(String email, String senha) { // pode retornar nulo
-        String SQL = "SELECT * FROM crypta_nostalgica.Usuario_Usu_logado_Usu_admin WHERE e_mail and senha= ?";
+        String SQL = "SELECT * FROM crypta_nostalgica.Usuario_Usu_logado_Usu_admin WHERE e_mail = ? and senha= ?";
         Usuario usuario = null;
 
         try (PreparedStatement pstmt = connection.prepareStatement(SQL)) {
